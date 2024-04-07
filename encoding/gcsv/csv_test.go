@@ -2,25 +2,25 @@ package gcsv
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/basic/gtest"
-	"goutil/sys/gtime"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gtest"
+	"github.com/davidforest123/goutil/sys/gtime"
 	"testing"
 	"time"
 )
 
 type (
 	user struct {
-	Name      string    `csv:"name"`
-	Age       int       `csv:"age,omitempty"`
-	CreatedAt time.Time `csv:"createat"`
-	Address   string    `csv:"address"`
-	IsMale    bool      `csv:"ismale"`
-}
+		Name      string    `csv:"name"`
+		Age       int       `csv:"age,omitempty"`
+		CreatedAt time.Time `csv:"createat"`
+		Address   string    `csv:"address"`
+		IsMale    bool      `csv:"ismale"`
+	}
 )
 
 var (
- csvInput1 = []byte(`
+	csvInput1 = []byte(`
 name,age,createat,address
 jack,26,2012-04-01T15:00:00Z,beijing
 
@@ -28,7 +28,7 @@ john,,0001-01-01T00:00:00Z,beijing
 
 tom,23,2012-04-01T15:00:00Z,"""here""
 and there"`,
-)
+	)
 
 	csvInput2 = []byte(`
 name,age,createat,address,ismale
@@ -38,7 +38,7 @@ john,,0001-01-01T00:00:00Z,beijing,false
 
 tom,23,2012-04-01T15:00:00Z,"""here""
 and there",true`,
-)
+	)
 )
 
 func TestMarshalBytes(t *testing.T) {
@@ -86,7 +86,7 @@ func TestMarshalBytes(t *testing.T) {
 	outUsers = nil
 	buf, err := MarshalBytes(&inUsers, true)
 	gtest.Assert(t, gerrors.Wrap(err, "MarshalBytes"))
-	err = UnmarshalBytes(buf,  &outUsers)
+	err = UnmarshalBytes(buf, &outUsers)
 	gtest.Assert(t, gerrors.Wrap(err, "UnmarshalBytes"))
 	gtest.Assert(t, checkUsersEqual(inUsers, outUsers))
 }
@@ -132,7 +132,7 @@ func TestUnmarshalBytes_WithCsvComment(t *testing.T) {
 	}
 
 	var outChunk Chunk
-	err = UnmarshalBytes(csvInput2,  &outChunk.Docs)
+	err = UnmarshalBytes(csvInput2, &outChunk.Docs)
 	gtest.Assert(t, err)
 	for _, v := range outChunk.Docs {
 		fmt.Println(v)

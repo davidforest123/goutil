@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"goutil/sys/gcron"
+	"github.com/davidforest123/goutil/sys/gcron"
 	"sync"
 	"time"
 )

@@ -2,8 +2,8 @@ package gstun
 
 import (
 	"github.com/ccding/go-stun/stun"
-	"goutil/basic/gerrors"
-	"goutil/net/gnet"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/net/gnet"
 )
 
 // https://www.cnblogs.com/xinbigworld/p/16297220.html 什么情况下可以进行NAT？

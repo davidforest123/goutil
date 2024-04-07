@@ -1,9 +1,9 @@
 package gconfig
 
 import (
+	"github.com/davidforest123/goutil/basic/gtest"
+	"github.com/davidforest123/goutil/encoding/gjson"
 	"github.com/google/uuid"
-	"goutil/basic/gtest"
-	"goutil/encoding/gjson"
 	"os"
 	"testing"
 )

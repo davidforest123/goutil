@@ -2,7 +2,7 @@ package gfileserver
 
 import (
 	"fmt"
-	"goutil/basic/glog"
+	"github.com/davidforest123/goutil/basic/glog"
 	"html/template"
 	"io"
 	"log"

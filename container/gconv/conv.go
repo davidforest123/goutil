@@ -2,10 +2,10 @@ package gconv
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/container/gany"
-	"goutil/container/gnum"
-	"goutil/sys/gtime"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gany"
+	"github.com/davidforest123/goutil/container/gnum"
+	"github.com/davidforest123/goutil/sys/gtime"
 	"math/big"
 	"strconv"
 	"strings"

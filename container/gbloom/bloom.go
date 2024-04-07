@@ -2,9 +2,9 @@ package gbloom
 
 import (
 	"bufio"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/sys/gfs"
 	"github.com/willf/bloom"
-	"goutil/basic/gerrors"
-	"goutil/sys/gfs"
 	"os"
 )
 

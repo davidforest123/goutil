@@ -1,7 +1,7 @@
 package gusers
 
 import (
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"os/exec"
 	"runtime"
 )

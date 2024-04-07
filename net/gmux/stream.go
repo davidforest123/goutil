@@ -2,7 +2,7 @@ package gmux
 
 import (
 	"encoding/binary"
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"io"
 	"net"
 	"sync"

@@ -1,10 +1,10 @@
 package ghttp
 
 import (
-	"github.com/avct/uasurfer"     // 准确性很高
+	"github.com/avct/uasurfer" // 准确性很高
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gconv"
 	"github.com/mssola/user_agent" // 实测准确性较差
-	"goutil/basic/gerrors"
-	"goutil/container/gconv"
 	"strings"
 )
 

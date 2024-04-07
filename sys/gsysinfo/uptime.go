@@ -1,8 +1,8 @@
 package gsysinfo
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/shirou/gopsutil/v3/host"
-	"goutil/basic/gerrors"
 	"runtime"
 	"time"
 )

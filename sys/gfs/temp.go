@@ -1,8 +1,8 @@
 package gfs
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/google/uuid"
-	"goutil/basic/gerrors"
 	"runtime"
 )
 

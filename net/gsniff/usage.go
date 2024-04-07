@@ -1,6 +1,6 @@
 package gsniff
 
-import "goutil/basic/gerrors"
+import "github.com/davidforest123/goutil/basic/gerrors"
 
 // Usage multiplexing connection, dialer and listener.
 // It uses the initial 8 bytes of each connection to indicate its purpose,

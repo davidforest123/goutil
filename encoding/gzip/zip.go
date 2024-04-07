@@ -3,7 +3,7 @@ package gzip
 import (
 	"archive/zip"
 	"bytes"
-	"goutil/sys/gfs"
+	"github.com/davidforest123/goutil/sys/gfs"
 	"io"
 	"io/ioutil"
 	"os"

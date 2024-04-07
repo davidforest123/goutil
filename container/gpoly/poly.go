@@ -1,8 +1,8 @@
 package gpoly
 
 import (
-	"goutil/container/ggeometry"
-	"goutil/container/gpoly/polyfit"
+	"github.com/davidforest123/goutil/container/ggeometry"
+	"github.com/davidforest123/goutil/container/gpoly/polyfit"
 	"math"
 )
 

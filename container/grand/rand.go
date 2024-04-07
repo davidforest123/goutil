@@ -2,7 +2,7 @@ package grand
 
 import (
 	"github.com/Pallinder/go-randomdata"
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"math/rand"
 )
 

@@ -2,7 +2,7 @@ package grand
 
 import (
 	"fmt"
-	"goutil/basic/gtest"
+	"github.com/davidforest123/goutil/basic/gtest"
 	"testing"
 )
 

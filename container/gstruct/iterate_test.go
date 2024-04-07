@@ -2,7 +2,7 @@ package gstruct
 
 import (
 	"fmt"
-	"goutil/basic/gtest"
+	"github.com/davidforest123/goutil/basic/gtest"
 	"reflect"
 	"testing"
 )

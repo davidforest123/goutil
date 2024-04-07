@@ -1,10 +1,10 @@
 package gnet
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gstring"
+	"github.com/davidforest123/goutil/encoding/gmultimedia"
 	"github.com/goware/urlx"
-	"goutil/basic/gerrors"
-	"goutil/container/gstring"
-	"goutil/encoding/gmultimedia"
 	"net"
 	"net/url"
 	"path/filepath"

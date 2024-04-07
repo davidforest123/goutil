@@ -1,7 +1,7 @@
 package anycloud
 
 import (
-	"goutil/net/gmsg"
+	"github.com/davidforest123/goutil/net/gmsg"
 	"net"
 )
 

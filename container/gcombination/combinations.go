@@ -30,7 +30,7 @@ For input slice {"A", "B", "C", "D"} there are 2^4 - 1 = 15 binary combinations,
 package gcombination
 
 import (
-	"goutil/container/gbit"
+	"github.com/davidforest123/goutil/container/gbit"
 )
 
 // All returns all combinations for a given interface array.

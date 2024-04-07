@@ -3,7 +3,7 @@ package gcounter
 // A wrapper for recycle number accumulator, like network package serial number.
 
 import (
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"sync"
 )
 

@@ -3,7 +3,7 @@ package gtaskqueue
 // Task sender queue in memory with statistic function.
 
 import (
-	"goutil/sys/gtime"
+	"github.com/davidforest123/goutil/sys/gtime"
 	"sync"
 	"time"
 )

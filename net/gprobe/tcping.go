@@ -1,9 +1,9 @@
 package gprobe
 
 import (
-	"goutil/basic/gerrors"
-	"goutil/container/gconv"
-	"goutil/net/gnet"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gconv"
+	"github.com/davidforest123/goutil/net/gnet"
 	"net"
 	"time"
 )

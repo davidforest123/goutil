@@ -2,8 +2,8 @@ package gbindata
 
 import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
-	"goutil/basic/gerrors"
-	"goutil/sys/gfs"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/sys/gfs"
 )
 
 func Dec(fileHexString *string, outputBinaryFilename string) error {

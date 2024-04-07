@@ -2,9 +2,9 @@ package gencrypt
 
 import (
 	"bytes"
+	"github.com/davidforest123/goutil/basic/gtest"
+	"github.com/davidforest123/goutil/container/grand"
 	"github.com/sekrat/aescrypter"
-	"goutil/basic/gtest"
-	"goutil/container/grand"
 	"testing"
 )
 

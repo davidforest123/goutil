@@ -2,9 +2,9 @@ package glog
 
 import (
 	"fmt"
-	"goutil/sys/gmachineid"
-	"goutil/sys/gproc"
-	"goutil/sys/gsysinfo"
+	"github.com/davidforest123/goutil/sys/gmachineid"
+	"github.com/davidforest123/goutil/sys/gproc"
+	"github.com/davidforest123/goutil/sys/gsysinfo"
 	"path"
 )
 

@@ -1,9 +1,9 @@
 package gsniff
 
 import (
-	"goutil/basic/gerrors"
-	"goutil/container/gany"
-	"goutil/net/gnet"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gany"
+	"github.com/davidforest123/goutil/net/gnet"
 	"net"
 	"strings"
 )

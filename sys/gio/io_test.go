@@ -2,7 +2,7 @@ package gio
 
 import (
 	"fmt"
-	"goutil/basic/gtest"
+	"github.com/davidforest123/goutil/basic/gtest"
 	"io"
 	"net"
 	"strings"

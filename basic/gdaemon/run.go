@@ -2,8 +2,8 @@ package gdaemon
 
 import (
 	"github.com/VividCortex/godaemon"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/takama/daemon"
-	"goutil/basic/gerrors"
 	"runtime"
 )
 

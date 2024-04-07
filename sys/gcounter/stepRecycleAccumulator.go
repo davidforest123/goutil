@@ -4,7 +4,7 @@ package gcounter
 // 多次递增只计做一次，且循环计数.
 
 import (
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"sync"
 )
 

@@ -1,8 +1,8 @@
 package gnet
 
 import (
-	"goutil/basic/gerrors"
-	"goutil/container/grand"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/grand"
 	"net"
 	"strconv"
 	"strings"

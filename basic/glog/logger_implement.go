@@ -2,10 +2,10 @@ package glog
 
 import (
 	"fmt"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/sys/gfs"
+	"github.com/davidforest123/goutil/sys/gtime"
 	"github.com/sttts/color"
-	"goutil/basic/gerrors"
-	"goutil/sys/gfs"
-	"goutil/sys/gtime"
 	"io"
 	"os"
 	"strings"

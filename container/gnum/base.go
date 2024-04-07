@@ -1,8 +1,8 @@
 package gnum
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/kenshaw/baseconv"
-	"goutil/basic/gerrors"
 	"strconv"
 )
 

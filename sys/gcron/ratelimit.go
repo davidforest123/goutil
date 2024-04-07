@@ -6,7 +6,7 @@ package gcron
 // then, MarkAndWaitBlock() before every http request.
 
 import (
-	"goutil/sys/gtime"
+	"github.com/davidforest123/goutil/sys/gtime"
 	"sync"
 	"time"
 )

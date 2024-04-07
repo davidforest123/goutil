@@ -1,7 +1,7 @@
 package speedtest
 
 import (
-	"goutil/container/gspeed"
+	"github.com/davidforest123/goutil/container/gspeed"
 )
 
 func TestDownloadSpeed() (gspeed.Speed, error) {

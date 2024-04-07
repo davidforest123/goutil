@@ -2,7 +2,7 @@ package gnet_test
 
 import (
 	"fmt"
-	"goutil/net/gnet"
+	"github.com/davidforest123/goutil/net/gnet"
 	"testing"
 )
 

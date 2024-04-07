@@ -2,7 +2,7 @@ package gfs
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"os"
 	"path"
 	"path/filepath"

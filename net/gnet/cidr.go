@@ -1,8 +1,8 @@
 package gnet
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/yl2chen/cidranger"
-	"goutil/basic/gerrors"
 	"net"
 )
 

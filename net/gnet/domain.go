@@ -6,15 +6,15 @@ package gnet
 //判断两个域名是不是同一个所有人，比如news.baidu和www.baidu.com就是同一个所有者
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gstring"
+	"github.com/davidforest123/goutil/sys/gfs"
+	"github.com/davidforest123/goutil/sys/gsysinfo"
 	"github.com/domainr/whois"
 	"github.com/globalsign/publicsuffix"
 	"github.com/joeguo/tldextract"
 	"github.com/liamcurry/domains"
 	gowhois "github.com/likexian/whois"
-	"goutil/basic/gerrors"
-	"goutil/container/gstring"
-	"goutil/sys/gfs"
-	"goutil/sys/gsysinfo"
 	"os"
 	"strings"
 	"time"

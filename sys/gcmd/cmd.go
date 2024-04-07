@@ -1,8 +1,8 @@
 package gcmd
 
 import (
-	"goutil/basic/gerrors"
-	"goutil/sys/gproc"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/sys/gproc"
 	"os"
 	"os/exec"
 	"strings"

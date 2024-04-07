@@ -2,7 +2,7 @@ package gqueue
 
 import (
 	"container/list"
-	"goutil/safe/gwg"
+	"github.com/davidforest123/goutil/safe/gwg"
 	"time"
 )
 

@@ -2,7 +2,7 @@ package gmail
 
 import (
 	"github.com/badoux/checkmail"
-	"goutil/container/gstring"
+	"github.com/davidforest123/goutil/container/gstring"
 	"strings"
 )
 

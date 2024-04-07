@@ -2,10 +2,10 @@ package gtime
 
 import (
 	"fmt"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gnum"
+	"github.com/davidforest123/goutil/container/gstring"
 	"github.com/hako/durafmt"
-	"goutil/basic/gerrors"
-	"goutil/container/gnum"
-	"goutil/container/gstring"
 	"math"
 	"strconv"
 	"strings"

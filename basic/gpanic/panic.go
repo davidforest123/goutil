@@ -2,7 +2,7 @@ package gpanic
 
 import (
 	"fmt"
-	"goutil/basic/glog"
+	"github.com/davidforest123/goutil/basic/glog"
 	"os"
 )
 

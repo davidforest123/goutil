@@ -9,10 +9,10 @@ package fileserver
 
 import (
 	"expvar"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/glog"
 	"github.com/valyala/fasthttp"
 	"github.com/valyala/fasthttp/expvarhandler"
-	"goutil/basic/gerrors"
-	"goutil/basic/glog"
 )
 
 type FileServerOptions struct {

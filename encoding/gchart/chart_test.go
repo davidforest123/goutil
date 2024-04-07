@@ -1,8 +1,8 @@
 package gchart
 
 import (
+	"github.com/davidforest123/goutil/sys/gfs"
 	"github.com/wcharczuk/go-chart"
-	"goutil/sys/gfs"
 	"time"
 )
 

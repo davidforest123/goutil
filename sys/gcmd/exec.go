@@ -2,7 +2,7 @@ package gcmd
 
 import (
 	"fmt"
-	"goutil/sys/gproc"
+	"github.com/davidforest123/goutil/sys/gproc"
 	"os"
 	"os/exec"
 	"strings"

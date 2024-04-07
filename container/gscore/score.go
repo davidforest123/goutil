@@ -1,6 +1,6 @@
 package gscore
 
-import "goutil/basic/gerrors"
+import "github.com/davidforest123/goutil/basic/gerrors"
 
 type sub struct {
 	scaleInTotal                              int // 此sub项目的占比，所有sub的这个值的总和必须等于100

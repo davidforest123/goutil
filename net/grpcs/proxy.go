@@ -4,9 +4,9 @@ package grpcs
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/basic/glog"
-	"goutil/net/gnet"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/glog"
+	"github.com/davidforest123/goutil/net/gnet"
 	"net"
 	"sort"
 	"strings"

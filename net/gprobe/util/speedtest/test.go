@@ -2,8 +2,8 @@ package speedtest
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/container/gnum"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gnum"
 	"io/ioutil"
 	"net/http"
 	"net/url"

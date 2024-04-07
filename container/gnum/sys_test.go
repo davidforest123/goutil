@@ -1,8 +1,8 @@
 package gnum
 
 import (
-	"goutil/basic/gtest"
-	"goutil/container/grand"
+	"github.com/davidforest123/goutil/basic/gtest"
+	"github.com/davidforest123/goutil/container/grand"
 	"math/big"
 	"strconv"
 	"testing"

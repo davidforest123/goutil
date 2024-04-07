@@ -3,7 +3,7 @@ package gnet
 // Email such like "HOSTNAME" / "DOMAIN" / "IP" / ":PORT" / "HOSTNAME:PORT" / "DOMAIN:PORT" / "IP:PORT"
 
 import (
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"net"
 	"strconv"
 	"strings"

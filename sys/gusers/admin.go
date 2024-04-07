@@ -2,9 +2,9 @@ package gusers
 
 import (
 	"fmt"
+	"github.com/davidforest123/goutil/sys/gfs"
+	"github.com/davidforest123/goutil/sys/gsysinfo"
 	"github.com/google/uuid"
-	"goutil/sys/gfs"
-	"goutil/sys/gsysinfo"
 	"os"
 )
 

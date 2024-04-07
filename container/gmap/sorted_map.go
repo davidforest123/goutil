@@ -1,6 +1,6 @@
 package gmap
 
-import "goutil/container/gstring"
+import "github.com/davidforest123/goutil/container/gstring"
 
 type (
 	SortedMap struct {

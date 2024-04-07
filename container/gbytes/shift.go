@@ -2,7 +2,7 @@ package gbytes
 
 import (
 	"encoding/binary"
-	"goutil/container/gnum"
+	"github.com/davidforest123/goutil/container/gnum"
 )
 
 /* encode 8 bits bool */

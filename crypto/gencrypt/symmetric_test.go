@@ -2,7 +2,7 @@ package gencrypt
 
 import (
 	"bytes"
-	"goutil/crypto/gbase"
+	"github.com/davidforest123/goutil/crypto/gbase"
 	"testing"
 )
 

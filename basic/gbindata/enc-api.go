@@ -6,9 +6,9 @@ import (
 	"bufio"
 	"encoding/hex"
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/container/gstring"
-	"goutil/sys/gfs"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gstring"
+	"github.com/davidforest123/goutil/sys/gfs"
 	"os"
 )
 

@@ -1,10 +1,10 @@
 package gdesktop
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/sys/gfs"
+	"github.com/davidforest123/goutil/sys/gproc"
 	"github.com/go-vgo/robotgo"
-	"goutil/basic/gerrors"
-	"goutil/sys/gfs"
-	"goutil/sys/gproc"
 	"strings"
 )
 

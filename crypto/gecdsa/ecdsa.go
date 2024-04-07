@@ -3,10 +3,10 @@ package gecdsa
 import (
 	"crypto/ecdsa"
 	"encoding/hex"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/crypto/gcryptfmt"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/jbenet/go-base58"
-	"goutil/basic/gerrors"
-	"goutil/crypto/gcryptfmt"
 )
 
 type (

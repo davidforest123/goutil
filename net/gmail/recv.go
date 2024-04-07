@@ -2,11 +2,11 @@ package gmail
 
 import (
 	"encoding/base64"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gstring"
+	"github.com/davidforest123/goutil/i18n/gcharset"
 	"github.com/emersion/go-imap/client"
 	"github.com/emersion/go-message/mail"
-	"goutil/basic/gerrors"
-	"goutil/container/gstring"
-	"goutil/i18n/gcharset"
 	"io"
 	"io/ioutil"
 	"strings"

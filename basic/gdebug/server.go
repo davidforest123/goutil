@@ -1,9 +1,9 @@
 package gdebug
 
 import (
-	"goutil/basic/glog"
-	"goutil/container/gternary"
-	"goutil/net/gnet"
+	"github.com/davidforest123/goutil/basic/glog"
+	"github.com/davidforest123/goutil/container/gternary"
+	"github.com/davidforest123/goutil/net/gnet"
 	"html/template"
 	"net/http"
 	"net/http/pprof"

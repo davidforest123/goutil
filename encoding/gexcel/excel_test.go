@@ -1,8 +1,8 @@
 package gexcel
 
 import (
-	"goutil/encoding/gjson"
-	"goutil/sys/gfs"
+	"github.com/davidforest123/goutil/encoding/gjson"
+	"github.com/davidforest123/goutil/sys/gfs"
 	"testing"
 )
 

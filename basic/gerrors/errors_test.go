@@ -1,8 +1,8 @@
 package gerrors
 
 import (
+	"github.com/davidforest123/goutil/basic/gtest"
 	pkgErr "github.com/pkg/errors"
-	"goutil/basic/gtest"
 	"strings"
 	"testing"
 )

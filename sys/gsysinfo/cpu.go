@@ -1,7 +1,7 @@
 package gsysinfo
 
 import (
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	//"github.com/klauspost/cpuid" // x86/x64 is supported only for now
 	"github.com/shirou/gopsutil/v3/cpu"
 	"runtime"

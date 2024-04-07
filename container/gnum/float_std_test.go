@@ -2,7 +2,7 @@ package gnum
 
 import (
 	"fmt"
-	"goutil/encoding/gjson"
+	"github.com/davidforest123/goutil/encoding/gjson"
 	"math"
 	"testing"
 )

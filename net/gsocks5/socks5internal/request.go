@@ -2,10 +2,10 @@ package socks5internal
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/container/gany"
-	"goutil/net/gnet"
-	"goutil/sys/gio"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gany"
+	"github.com/davidforest123/goutil/net/gnet"
+	"github.com/davidforest123/goutil/sys/gio"
 	"io"
 	"net"
 	"strconv"

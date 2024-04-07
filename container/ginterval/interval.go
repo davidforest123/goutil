@@ -1,9 +1,9 @@
 package ginterval
 
 import (
-	"goutil/basic/gerrors"
-	"goutil/container/gnum"
-	"goutil/container/gstring"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gnum"
+	"github.com/davidforest123/goutil/container/gstring"
 	"strings"
 )
 

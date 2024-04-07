@@ -4,8 +4,8 @@ package gssh
 // https://github.com/yahoo/vssh
 
 import (
+	"github.com/davidforest123/goutil/net/gnet"
 	"github.com/melbahja/goph"
-	"goutil/net/gnet"
 )
 
 type Client struct {

@@ -3,9 +3,9 @@ package socks5internal
 import (
 	"bufio"
 	"fmt"
+	"github.com/davidforest123/goutil/basic/glog"
+	"github.com/davidforest123/goutil/net/gnet"
 	"golang.org/x/net/context"
-	"goutil/basic/glog"
-	"goutil/net/gnet"
 	"net"
 )
 

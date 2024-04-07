@@ -2,8 +2,8 @@ package gmem
 
 import (
 	"fmt"
+	"github.com/davidforest123/goutil/container/gvolume"
 	"github.com/shirou/gopsutil/v3/mem"
-	"goutil/container/gvolume"
 )
 
 type MemUsage struct {

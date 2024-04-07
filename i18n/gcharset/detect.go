@@ -3,9 +3,9 @@ package gcharset
 // github.com/chrisport/go-lang-detector
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/johngb/langreg" // ISO-639-1 Code
 	"github.com/taruti/langdetect"
-	"goutil/basic/gerrors"
 )
 
 func DetectNatrualLanguage(utf8Slice []byte) (lang langdetect.Language, err error) {

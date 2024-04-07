@@ -4,8 +4,8 @@ package gsingle
 // test succeed under linux: https://github.com/allan-simon/go-singleinstance
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/marcsauter/single"
-	"goutil/basic/gerrors"
 )
 
 type Instance struct {

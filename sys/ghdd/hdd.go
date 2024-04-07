@@ -1,9 +1,9 @@
 package ghdd
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gvolume"
 	"github.com/shirou/gopsutil/v3/disk"
-	"goutil/basic/gerrors"
-	"goutil/container/gvolume"
 )
 
 // https://github.com/cydev/du

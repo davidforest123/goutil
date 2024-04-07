@@ -2,9 +2,9 @@ package anycloud
 
 import (
 	"encoding/json"
-	"goutil/basic/gerrors"
-	"goutil/encoding/gjson"
-	"goutil/net/grpcs"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/encoding/gjson"
+	"github.com/davidforest123/goutil/net/grpcs"
 )
 
 type (

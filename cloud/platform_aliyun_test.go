@@ -2,10 +2,10 @@ package cloud
 
 import (
 	"fmt"
-	"goutil/basic/gtest"
-	"goutil/container/gnum"
-	"goutil/encoding/gjson"
-	"goutil/sys/gsysinfo"
+	"github.com/davidforest123/goutil/basic/gtest"
+	"github.com/davidforest123/goutil/container/gnum"
+	"github.com/davidforest123/goutil/encoding/gjson"
+	"github.com/davidforest123/goutil/sys/gsysinfo"
 	"testing"
 )
 

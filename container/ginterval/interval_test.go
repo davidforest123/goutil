@@ -1,8 +1,8 @@
 package ginterval
 
 import (
-	"goutil/basic/gtest"
-	"goutil/container/gnum"
+	"github.com/davidforest123/goutil/basic/gtest"
+	"github.com/davidforest123/goutil/container/gnum"
 	"testing"
 )
 

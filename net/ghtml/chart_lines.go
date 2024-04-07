@@ -3,9 +3,9 @@ package ghtml
 import (
 	"encoding/json"
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/container/gnum"
-	"goutil/sys/gtime"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gnum"
+	"github.com/davidforest123/goutil/sys/gtime"
 	"time"
 )
 

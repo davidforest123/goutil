@@ -1,14 +1,14 @@
 package gnum
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gany"
+	"github.com/davidforest123/goutil/container/gstring"
 	"github.com/shopspring/decimal"
 	"go.mongodb.org/mongo-driver/bson/bsontype"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/x/bsonx"
 	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
-	"goutil/basic/gerrors"
-	"goutil/container/gany"
-	"goutil/container/gstring"
 	"math"
 	"math/big"
 	"strconv"

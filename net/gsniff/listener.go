@@ -8,9 +8,9 @@ package gsniff
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/net/gnet"
-	"goutil/sys/gio"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/net/gnet"
+	"github.com/davidforest123/goutil/sys/gio"
 	"io"
 	"net"
 	"net/http"

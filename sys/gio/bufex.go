@@ -5,7 +5,7 @@ package gio
 
 import (
 	"bufio"
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"io"
 	"runtime"
 	"time"

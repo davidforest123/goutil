@@ -1,6 +1,6 @@
 package gchan
 
-import "goutil/basic/gerrors"
+import "github.com/davidforest123/goutil/basic/gerrors"
 
 // reference: https://go101.org/article/channel-closing.html
 

@@ -3,7 +3,7 @@ package gio
 import (
 	"bytes"
 	"errors"
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"io"
 	"net"
 	"strings"

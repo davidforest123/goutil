@@ -2,9 +2,9 @@ package gmail
 
 import (
 	"encoding/json"
-	"goutil/basic/gerrors"
-	"goutil/container/gstring"
-	"goutil/net/gnet"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gstring"
+	"github.com/davidforest123/goutil/net/gnet"
 	"strings"
 )
 

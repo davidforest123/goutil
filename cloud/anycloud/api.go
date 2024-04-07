@@ -1,7 +1,7 @@
 package anycloud
 
 import (
-	"goutil/net/grpcs"
+	"github.com/davidforest123/goutil/net/grpcs"
 )
 
 type (

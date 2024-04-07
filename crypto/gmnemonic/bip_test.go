@@ -2,10 +2,10 @@ package gmnemonic
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/basic/gtest"
-	"goutil/crypto/gcryptfmt"
-	"goutil/crypto/gcrypto"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gtest"
+	"github.com/davidforest123/goutil/crypto/gcryptfmt"
+	"github.com/davidforest123/goutil/crypto/gcrypto"
 	"strings"
 	"testing"
 )

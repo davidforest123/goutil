@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"goutil/basic/gsingle"
+	"github.com/davidforest123/goutil/basic/gsingle"
 	"log"
 	"time"
 )

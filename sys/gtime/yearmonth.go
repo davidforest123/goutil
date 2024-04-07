@@ -2,18 +2,18 @@ package gtime
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"strconv"
 	"strings"
 	"time"
 )
 
-//isLearYear 判断年份是否是润年
+// isLearYear 判断年份是否是润年
 func IsLeapYear(year int) bool {
 	return year%400 == 0 || year%4 == 0 && year%100 != 0
 }
 
-//getMonthDays 获取月份对应的月份天数
+// getMonthDays 获取月份对应的月份天数
 func GetMonthDays(year, month int) int {
 	days := 30
 	switch {

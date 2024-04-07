@@ -1,9 +1,9 @@
 package gnet
 
 import (
+	"github.com/davidforest123/goutil/net/ghttp"
+	"github.com/davidforest123/goutil/sys/gfs"
 	"github.com/mohong122/ip2region/binding/golang/ip2region"
-	"goutil/net/ghttp"
-	"goutil/sys/gfs"
 	"net"
 	"os"
 	"time"

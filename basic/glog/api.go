@@ -1,7 +1,7 @@
 package glog
 
 import (
-	"goutil/sys/gtime"
+	"github.com/davidforest123/goutil/sys/gtime"
 	"sync/atomic"
 )
 

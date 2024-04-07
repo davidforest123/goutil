@@ -6,7 +6,7 @@ package gnet
 import "C"
 
 import (
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"net"
 	"syscall"
 )

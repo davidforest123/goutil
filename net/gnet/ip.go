@@ -22,8 +22,8 @@ IPV4的保留地址汇总
 
 import (
 	"encoding/binary"
-	"goutil/basic/gerrors"
-	"goutil/container/gconv"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gconv"
 	"net"
 	"strings"
 )

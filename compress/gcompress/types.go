@@ -1,7 +1,7 @@
 package gcompress
 
 import (
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"strings"
 )
 

@@ -2,12 +2,12 @@ package gjsonconfig
 
 import (
 	"encoding/json"
-	"goutil/basic/gerrors"
-	"goutil/container/gany"
-	"goutil/container/gstring"
-	"goutil/encoding/gjson"
-	"goutil/sys/gfs"
-	"goutil/sys/gproc"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gany"
+	"github.com/davidforest123/goutil/container/gstring"
+	"github.com/davidforest123/goutil/encoding/gjson"
+	"github.com/davidforest123/goutil/sys/gfs"
+	"github.com/davidforest123/goutil/sys/gproc"
 	"io/ioutil"
 	"runtime"
 	"strings"

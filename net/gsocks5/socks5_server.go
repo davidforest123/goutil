@@ -1,9 +1,9 @@
 package gsocks5
 
 import (
-	"goutil/basic/glog"
-	"goutil/net/gnet"
-	"goutil/net/gsocks5/socks5internal"
+	"github.com/davidforest123/goutil/basic/glog"
+	"github.com/davidforest123/goutil/net/gnet"
+	"github.com/davidforest123/goutil/net/gsocks5/socks5internal"
 	"net"
 )
 

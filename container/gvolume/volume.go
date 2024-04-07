@@ -2,9 +2,9 @@ package gvolume
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/container/gspeed"
-	"goutil/container/gstring"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gspeed"
+	"github.com/davidforest123/goutil/container/gstring"
 	"strings"
 )
 

@@ -2,7 +2,7 @@ package gnet
 
 import (
 	"errors"
-	"goutil/sys/gcmd"
+	"github.com/davidforest123/goutil/sys/gcmd"
 	"runtime"
 	"strings"
 )

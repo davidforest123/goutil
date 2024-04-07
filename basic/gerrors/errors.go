@@ -214,7 +214,7 @@ func GetStack(err error) string {
 
 	// pkg/errors
 	// Support "github/pkg/errors".
-	// Not support standard "goutil/basic/gerrors".
+	// Not support standard "github.com/davidforest123/goutil/basic/gerrors".
 	// Sometimes even pkg/errors used, can't get stack for error created by gerrors.New(). But errors.New works always.
 	stack = removeFirstLines(fmt.Sprintf("%+v\n", err), 1)
 

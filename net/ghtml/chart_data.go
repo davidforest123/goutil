@@ -1,9 +1,9 @@
 package ghtml
 
 import (
-	"goutil/container/gnum"
-	"goutil/encoding/gcolor"
-	"goutil/sys/gtime"
+	"github.com/davidforest123/goutil/container/gnum"
+	"github.com/davidforest123/goutil/encoding/gcolor"
+	"github.com/davidforest123/goutil/sys/gtime"
 )
 
 type (

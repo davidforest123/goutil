@@ -2,7 +2,7 @@ package ghdd
 
 import (
 	"encoding/json"
-	"goutil/sys/gproc"
+	"github.com/davidforest123/goutil/sys/gproc"
 	"log"
 	"testing"
 )

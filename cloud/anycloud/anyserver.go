@@ -1,7 +1,7 @@
 package anycloud
 
 import (
-	"goutil/net/gssh"
+	"github.com/davidforest123/goutil/net/gssh"
 )
 
 type (

@@ -1,12 +1,12 @@
 package gproxy
 
 import (
-	"goutil/basic/gerrors"
-	"goutil/net/gnet"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/net/gnet"
 
 	// "github.com/GameXG/ProxyClient" // http client using socks5 proxy supported not well
-	"goutil/container/gspeed"
-	"goutil/net/ghttp"
+	"github.com/davidforest123/goutil/container/gspeed"
+	"github.com/davidforest123/goutil/net/ghttp"
 	"time"
 )
 

@@ -5,10 +5,10 @@ package gsysinfo
 */
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gstring"
+	"github.com/davidforest123/goutil/sys/gsysinfo/util"
 	"github.com/getlantern/osversion"
-	"goutil/basic/gerrors"
-	"goutil/container/gstring"
-	"goutil/sys/gsysinfo/util"
 	"runtime"
 	"strconv"
 	"strings"

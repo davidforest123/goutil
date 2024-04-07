@@ -1,10 +1,10 @@
 package gmachineid
 
 import (
-	"goutil/basic/gerrors"
-	"goutil/container/gstring"
-	"goutil/crypto/ghash"
-	"goutil/net/gnet"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gstring"
+	"github.com/davidforest123/goutil/crypto/ghash"
+	"github.com/davidforest123/goutil/net/gnet"
 	"os/exec"
 	"runtime"
 	"strings"

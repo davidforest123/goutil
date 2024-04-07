@@ -1,6 +1,6 @@
 package gmail
 
-import "goutil/basic/gerrors"
+import "github.com/davidforest123/goutil/basic/gerrors"
 
 type Account struct {
 	addr     Address

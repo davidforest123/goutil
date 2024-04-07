@@ -3,10 +3,10 @@ package gcompress
 // FIXME: this package doesn't work well for now, generated .zip file can't be read by other zip apps.
 
 import (
-	"goutil/basic/gerrors"
-	yekaZip "goutil/compress/gcompress/yekazip"
-	"goutil/sys/gfs"
-	"goutil/sys/gio"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	yekaZip "github.com/davidforest123/goutil/compress/gcompress/yekazip"
+	"github.com/davidforest123/goutil/sys/gfs"
+	"github.com/davidforest123/goutil/sys/gio"
 	"io"
 	"os"
 	"sync"

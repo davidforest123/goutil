@@ -1,8 +1,8 @@
 package gnum
 
 import (
-	"goutil/basic/gerrors"
-	"goutil/container/gstring"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gstring"
 	"math/big"
 	"strconv"
 	"strings"

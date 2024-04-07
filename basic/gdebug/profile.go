@@ -3,9 +3,9 @@ package gdebug
 import (
 	"bytes"
 	"fmt"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/sys/gfs"
 	"github.com/google/pprof/profile"
-	"goutil/basic/gerrors"
-	"goutil/sys/gfs"
 	"io/ioutil"
 	"os"
 	"runtime/pprof"

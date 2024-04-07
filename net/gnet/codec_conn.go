@@ -1,7 +1,7 @@
 package gnet
 
 import (
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"io"
 	"net"
 	"time"

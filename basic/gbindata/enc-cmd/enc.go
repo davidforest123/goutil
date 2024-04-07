@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"goutil/basic/gbindata"
+	"github.com/davidforest123/goutil/basic/gbindata"
 	"os"
 )
 

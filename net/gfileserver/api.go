@@ -6,7 +6,7 @@ package gfileserver
 
 import (
 	"fmt"
-	"goutil/basic/glog"
+	"github.com/davidforest123/goutil/basic/glog"
 	"log"
 	"net/http"
 	"os"

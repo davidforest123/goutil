@@ -1,8 +1,8 @@
 package gprobe
 
 import (
-	"goutil/container/gspeed"
-	"goutil/net/gprobe/util/speedtest"
+	"github.com/davidforest123/goutil/container/gspeed"
+	"github.com/davidforest123/goutil/net/gprobe/util/speedtest"
 )
 
 // github.com/showwin/speedtest-go 测试下来功能正常，但代码较乱 另外，代码比较清爽但是star很少且没有验证的库 https://github.com/sivel/speedtest/blob/master/speedtest.go

@@ -6,9 +6,9 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/clarkmcc/go-typescript/utils"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/grand"
 	"github.com/dop251/goja"
-	"goutil/basic/gerrors"
-	"goutil/container/grand"
 	"strings"
 )
 

@@ -2,10 +2,10 @@ package gnet
 
 import (
 	"fmt"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gstring"
+	"github.com/davidforest123/goutil/sys/gcmd"
 	"github.com/libp2p/go-netroute"
-	"goutil/basic/gerrors"
-	"goutil/container/gstring"
-	"goutil/sys/gcmd"
 	"net"
 	"runtime"
 	"strconv"

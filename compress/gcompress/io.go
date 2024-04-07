@@ -6,12 +6,12 @@ import (
 	"compress/flate"
 	"compress/gzip"
 	"compress/zlib"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/sys/gio"
 	"github.com/golang/snappy"
 	"github.com/klauspost/compress/s2"
 	"github.com/klauspost/compress/zstd"
 	"github.com/klauspost/pgzip"
-	"goutil/basic/gerrors"
-	"goutil/sys/gio"
 	"io"
 )
 

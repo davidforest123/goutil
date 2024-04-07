@@ -2,8 +2,8 @@ package gany
 
 import (
 	serr "errors"
-	"goutil/basic/gerrors"
-	"goutil/basic/gtest"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gtest"
 	"reflect"
 	"testing"
 )

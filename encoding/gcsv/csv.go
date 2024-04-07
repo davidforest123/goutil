@@ -3,18 +3,18 @@ package gcsv
 import (
 	"bytes"
 	"encoding/csv"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gany"
+	"github.com/davidforest123/goutil/container/gconv"
 	"github.com/gocarina/gocsv"
-	"goutil/basic/gerrors"
-	"goutil/container/gany"
-	"goutil/container/gconv"
 	"io"
 	"strings"
 )
 
 type (
 	Table struct {
-		Headers []string
-		Data    [][]string
+		Headers   []string
+		Data      [][]string
 		sortIdIdx int
 	}
 )

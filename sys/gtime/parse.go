@@ -2,9 +2,9 @@ package gtime
 
 import (
 	"github.com/bcampbell/fuzzytime"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gstring"
 	"github.com/tkuchiki/parsetime"
-	"goutil/basic/gerrors"
-	"goutil/container/gstring"
 	"strings"
 	"time"
 )

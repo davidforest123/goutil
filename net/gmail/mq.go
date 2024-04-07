@@ -1,9 +1,9 @@
 package gmail
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/grand"
 	"github.com/mikaa123/imapmq"
-	"goutil/basic/gerrors"
-	"goutil/container/grand"
 )
 
 // Used email account to implement a simple message queue

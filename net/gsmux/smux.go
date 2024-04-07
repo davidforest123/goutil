@@ -1,8 +1,8 @@
 package gsmux
 
 import (
+	"github.com/davidforest123/goutil/net/gmux"
 	"github.com/xtaci/smux"
-	"goutil/net/gmux"
 	"io"
 	"time"
 )

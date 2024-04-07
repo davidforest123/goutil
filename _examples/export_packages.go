@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"goutil/basic/glog"
-	"goutil/container/gstring"
-	"goutil/sys/gfs"
+	"github.com/davidforest123/goutil/basic/glog"
+	"github.com/davidforest123/goutil/container/gstring"
+	"github.com/davidforest123/goutil/sys/gfs"
 	"os"
 	"path/filepath"
 	"strings"
@@ -14,7 +14,7 @@ func main() {
 	goPath := os.Getenv("GOPATH")
 	glog.AssertTrue(goPath != "")
 
-	repoPath := "goutil"
+	repoPath := "github.com/davidforest123/goutil"
 	commpkgPath := filepath.Join(goPath, "src", repoPath)
 	dirs, _, err := gfs.WalkDir(commpkgPath)
 	glog.AssertOk(err, "WalkDir")

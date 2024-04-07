@@ -1,7 +1,7 @@
 package grpcs
 
 import (
-	"goutil/net/gnet"
+	"github.com/davidforest123/goutil/net/gnet"
 	"net/rpc"
 	"net/rpc/jsonrpc"
 )

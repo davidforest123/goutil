@@ -3,8 +3,8 @@ package gbarcode
 import (
 	"github.com/boombuler/barcode"
 	"github.com/boombuler/barcode/qr"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/tuotoo/qrcode"
-	"goutil/basic/gerrors"
 	"image/gif"
 	"image/jpeg"
 	"image/png"

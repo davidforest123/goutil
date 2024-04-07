@@ -8,7 +8,7 @@ package gcron
 // priority: 0->max_uint (high->low)
 
 import (
-	"goutil/container/gnum"
+	"github.com/davidforest123/goutil/container/gnum"
 	"sync"
 	"time"
 )

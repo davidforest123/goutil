@@ -2,8 +2,8 @@ package gnet
 
 import (
 	"fmt"
-	"goutil/basic/gtest"
-	"goutil/encoding/gjson"
+	"github.com/davidforest123/goutil/basic/gtest"
+	"github.com/davidforest123/goutil/encoding/gjson"
 	"testing"
 )
 

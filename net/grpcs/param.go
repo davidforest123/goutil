@@ -2,9 +2,9 @@ package grpcs
 
 import (
 	"encoding/gob"
-	"goutil/basic/gerrors"
-	"goutil/container/gany"
-	"goutil/container/gstring"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gany"
+	"github.com/davidforest123/goutil/container/gstring"
 )
 
 func init() {

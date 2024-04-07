@@ -1,6 +1,6 @@
 package gcompress
 
-import "goutil/basic/gerrors"
+import "github.com/davidforest123/goutil/basic/gerrors"
 
 type (
 	CompParam struct {

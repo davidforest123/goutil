@@ -1,6 +1,6 @@
 package gnet
 
-import "goutil/sys/gcmd"
+import "github.com/davidforest123/goutil/sys/gcmd"
 
 // BBRInfo implements the struct associated with INET_DIAG_BBRINFO attribute, corresponding with
 // linux struct tcp_bbr_info in uapi/linux/inet_diag.h.

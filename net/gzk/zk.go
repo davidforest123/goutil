@@ -3,8 +3,8 @@ package gzk
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/samuel/go-zookeeper/zk"
-	"goutil/basic/gerrors"
 	"strconv"
 	"time"
 )

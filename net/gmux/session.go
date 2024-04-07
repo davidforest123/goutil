@@ -4,7 +4,7 @@ import (
 	"container/heap"
 	"encoding/binary"
 	"errors"
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"io"
 	"net"
 	"sync"

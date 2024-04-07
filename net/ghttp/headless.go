@@ -4,8 +4,8 @@ import (
 	"context"
 	"github.com/chromedp/cdproto/dom"
 	"github.com/chromedp/chromedp"
+	phantomgo "github.com/davidforest123/goutil/net/ghttp/phantom"
 	"gopkg.in/headzoo/surf.v1"
-	phantomgo "goutil/net/ghttp/phantom"
 	"io/ioutil"
 )
 

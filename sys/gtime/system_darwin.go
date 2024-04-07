@@ -1,8 +1,8 @@
 package gtime
 
 import (
-	"goutil/basic/gerrors"
-	"goutil/sys/gusers"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/sys/gusers"
 	"syscall"
 	"time"
 )

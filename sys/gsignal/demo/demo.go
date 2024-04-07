@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"goutil/sys/gfs"
-	"goutil/sys/gsignal"
+	"github.com/davidforest123/goutil/sys/gfs"
+	"github.com/davidforest123/goutil/sys/gsignal"
 	"os"
 	"time"
 )

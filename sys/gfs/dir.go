@@ -2,8 +2,8 @@ package gfs
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/container/gstring"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gstring"
 	"io/ioutil"
 	"os"
 	"path/filepath"

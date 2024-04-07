@@ -3,9 +3,9 @@ package request
 // Detect as much information as possible from http client request
 
 import (
+	"github.com/davidforest123/goutil/net/ghttp"
+	"github.com/davidforest123/goutil/net/gnet"
 	"github.com/valyala/fasthttp"
-	"goutil/net/ghttp"
-	"goutil/net/gnet"
 	"strings"
 )
 

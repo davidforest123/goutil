@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"goutil/basic/glog"
-	"goutil/net/garp"
+	"github.com/davidforest123/goutil/basic/glog"
+	"github.com/davidforest123/goutil/net/garp"
 )
 
 func main() {

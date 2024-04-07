@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"goutil/container/gvolume"
+	"github.com/davidforest123/goutil/container/gvolume"
 )
 
 func main() {

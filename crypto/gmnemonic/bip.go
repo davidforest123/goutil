@@ -3,10 +3,10 @@ package gmnemonic
 import (
 	"github.com/btcsuite/btcd/btcutil/hdkeychain"
 	"github.com/btcsuite/btcd/chaincfg"
+	"github.com/davidforest123/goutil/crypto/gecdsa"
 	"github.com/ethereum/go-ethereum/accounts"
 	"github.com/tyler-smith/go-bip32"
 	"github.com/tyler-smith/go-bip39"
-	"goutil/crypto/gecdsa"
 )
 
 // NewRandMnemonic generates a string consisting of the mnemonic words for the given entropy.

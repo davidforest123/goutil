@@ -4,9 +4,9 @@ package gsysinfo
 
 import (
 	"bytes"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/sys/gcmd"
 	"github.com/getlantern/appdir"
-	"goutil/basic/gerrors"
-	"goutil/sys/gcmd"
 	"os"
 	"os/exec"
 	"os/user"

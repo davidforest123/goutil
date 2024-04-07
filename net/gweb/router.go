@@ -1,8 +1,8 @@
 package gweb
 
 import (
+	"github.com/davidforest123/goutil/net/ghttp"
 	"github.com/gin-gonic/gin"
-	"goutil/net/ghttp"
 )
 
 type (

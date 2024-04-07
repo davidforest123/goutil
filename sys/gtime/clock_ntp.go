@@ -4,13 +4,13 @@ package gtime
 // Change system clock need ROOT, but NtpClock doesn't.
 
 import (
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"math"
 	"sync"
 	"time"
 )
 
-// github.com/hlandau/degoutils/clock
+// github.com/hlandau/degithub.com/davidforest123/goutils/clock
 
 type NtpClock struct {
 	diff     time.Duration

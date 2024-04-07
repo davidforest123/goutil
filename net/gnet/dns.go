@@ -3,10 +3,10 @@ package gnet
 import (
 	"context"
 	"github.com/AdguardTeam/dnsproxy/upstream"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gany"
+	"github.com/davidforest123/goutil/container/gstring"
 	"github.com/miekg/dns"
-	"goutil/basic/gerrors"
-	"goutil/container/gany"
-	"goutil/container/gstring"
 	"net"
 	"os/exec"
 	"runtime"

@@ -1,8 +1,8 @@
 package gencrypt
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/wumansgy/goEncrypt/aes"
-	"goutil/basic/gerrors"
 )
 
 // TODO：使用https://github.com/forgoer/openssl等库验证测试当前的包

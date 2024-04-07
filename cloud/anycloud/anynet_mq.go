@@ -2,11 +2,11 @@ package anycloud
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/basic/glog"
-	"goutil/container/gqueue"
-	"goutil/dsa/guuid"
-	"goutil/net/gmsg"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/glog"
+	"github.com/davidforest123/goutil/container/gqueue"
+	"github.com/davidforest123/goutil/dsa/guuid"
+	"github.com/davidforest123/goutil/net/gmsg"
 	"net"
 	"time"
 )

@@ -2,9 +2,9 @@ package gmail
 
 import (
 	"fmt"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/sys/gtime"
 	gomail "github.com/go-mail/mail"
-	"goutil/basic/gerrors"
-	"goutil/sys/gtime"
 	"strings"
 	"time"
 )

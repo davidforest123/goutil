@@ -2,9 +2,9 @@ package gcrypto
 
 import (
 	"bytes"
+	"github.com/davidforest123/goutil/crypto/gcryptfmt"
+	"github.com/davidforest123/goutil/crypto/gecdsa"
 	"github.com/ethereum/go-ethereum/crypto"
-	"goutil/crypto/gcryptfmt"
-	"goutil/crypto/gecdsa"
 )
 
 type (

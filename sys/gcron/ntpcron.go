@@ -1,7 +1,7 @@
 package gcron
 
 import (
-	"goutil/sys/gtime"
+	"github.com/davidforest123/goutil/sys/gtime"
 	"time"
 )
 

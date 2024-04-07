@@ -2,11 +2,11 @@ package gtuntap
 
 import (
 	"fmt"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/net/gnet"
+	"github.com/davidforest123/goutil/sys/gcmd"
+	"github.com/davidforest123/goutil/sys/gio"
 	"github.com/songgao/water"
-	"goutil/basic/gerrors"
-	"goutil/net/gnet"
-	"goutil/sys/gcmd"
-	"goutil/sys/gio"
 	"io"
 	"net"
 	"runtime"

@@ -4,10 +4,10 @@ package ghttputils
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/glog"
 	"github.com/valyala/fasthttp"
 	"github.com/valyala/fasthttp/fasthttpproxy"
-	"goutil/basic/gerrors"
-	"goutil/basic/glog"
 	"io/ioutil"
 	"log"
 	"net/http"

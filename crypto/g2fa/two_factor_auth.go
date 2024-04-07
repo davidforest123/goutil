@@ -9,7 +9,7 @@ import (
 	"crypto/sha1"
 	"encoding/base32"
 	"fmt"
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"strings"
 	"time"
 )

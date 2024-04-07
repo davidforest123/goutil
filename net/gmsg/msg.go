@@ -1,9 +1,9 @@
 package gmsg
 
 import (
-	"goutil/basic/gerrors"
-	"goutil/container/gbytes"
-	"goutil/container/gnum"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gbytes"
+	"github.com/davidforest123/goutil/container/gnum"
 	"io"
 	"net"
 	"time"

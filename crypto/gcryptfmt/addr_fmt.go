@@ -2,8 +2,8 @@ package gcryptfmt
 
 import (
 	"encoding/hex"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"golang.org/x/crypto/sha3"
-	"goutil/basic/gerrors"
 	"strconv"
 	"strings"
 )

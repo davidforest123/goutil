@@ -3,9 +3,9 @@ package speedtest
 import (
 	"encoding/xml"
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/container/ggeo"
-	"goutil/container/gnum"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/ggeo"
+	"github.com/davidforest123/goutil/container/gnum"
 	"io/ioutil"
 	"net/http"
 	"sort"

@@ -6,7 +6,7 @@ copyright: https://github.com/sensepost/gowitness/blob/master/chrome/proxy.go
 
 import (
 	"context"
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"net/url"
 	"os"
 	"os/exec"

@@ -1,8 +1,8 @@
 package anycloud
 
 import (
-	"goutil/basic/gerrors"
-	"goutil/basic/gtest"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gtest"
 	"testing"
 )
 

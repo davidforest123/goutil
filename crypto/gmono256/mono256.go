@@ -9,8 +9,8 @@ This is a simple encryption algorithm that can be used in short or low security 
 
 import (
 	"encoding/base64"
-	"goutil/basic/gerrors"
-	"goutil/crypto/gcrypto"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/crypto/gcrypto"
 	"io"
 	"math/rand"
 	"strings"

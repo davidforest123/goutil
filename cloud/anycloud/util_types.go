@@ -2,8 +2,8 @@ package anycloud
 
 import (
 	"fmt"
-	"goutil/net/gsniff"
-	"goutil/net/gstun"
+	"github.com/davidforest123/goutil/net/gsniff"
+	"github.com/davidforest123/goutil/net/gstun"
 	"net"
 )
 

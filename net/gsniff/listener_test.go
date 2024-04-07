@@ -2,9 +2,9 @@ package gsniff
 
 import (
 	"fmt"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gtest"
 	"google.golang.org/grpc"
-	"goutil/basic/gerrors"
-	"goutil/basic/gtest"
 	"net"
 	"testing"
 )

@@ -1,10 +1,10 @@
 package intrpr
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gany"
 	"github.com/traefik/yaegi/interp"
 	"github.com/traefik/yaegi/stdlib"
-	"goutil/basic/gerrors"
-	"goutil/container/gany"
 	"reflect"
 )
 

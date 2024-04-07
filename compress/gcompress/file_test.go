@@ -2,9 +2,9 @@ package gcompress
 
 import (
 	"bytes"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gtest"
 	"github.com/yeka/zip"
-	"goutil/basic/gerrors"
-	"goutil/basic/gtest"
 	"io"
 	"log"
 	"os"

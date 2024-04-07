@@ -5,9 +5,9 @@ package gproc
 // https://github.com/janimo/memchart/blob/master/memchart.go
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/kardianos/osext"
 	"github.com/shirou/gopsutil/v3/process"
-	"goutil/basic/gerrors"
 	"os"
 	"path/filepath"
 	"runtime"

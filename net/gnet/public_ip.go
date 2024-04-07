@@ -1,11 +1,11 @@
 package gnet
 
 import (
-	"goutil/basic/gerrors"
-	"goutil/container/gstring"
-	"goutil/net/ghtml"
-	"goutil/net/ghttp"
-	"goutil/net/gprobe/xonline"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gstring"
+	"github.com/davidforest123/goutil/net/ghtml"
+	"github.com/davidforest123/goutil/net/ghttp"
+	"github.com/davidforest123/goutil/net/gprobe/xonline"
 	"net"
 	"strings"
 	"time"

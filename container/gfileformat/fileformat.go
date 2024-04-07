@@ -5,9 +5,9 @@ package gfileformat
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/container/gvolume"
-	"goutil/sys/gfs"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gvolume"
+	"github.com/davidforest123/goutil/sys/gfs"
 
 	"github.com/gabriel-vasile/mimetype"
 	"github.com/h2non/filetype"

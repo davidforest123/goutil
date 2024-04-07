@@ -1,9 +1,9 @@
 package gheadless
 
 import (
-	"goutil/basic/glog"
-	"goutil/basic/gtest"
-	"goutil/sys/gsysinfo"
+	"github.com/davidforest123/goutil/basic/glog"
+	"github.com/davidforest123/goutil/basic/gtest"
+	"github.com/davidforest123/goutil/sys/gsysinfo"
 	"path/filepath"
 	"testing"
 	"time"

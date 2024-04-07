@@ -3,8 +3,8 @@ package gjson
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/mailru/easyjson"
-	"goutil/basic/gerrors"
 	"reflect"
 	"strings"
 )

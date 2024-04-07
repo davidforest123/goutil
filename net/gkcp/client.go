@@ -2,8 +2,8 @@ package gkcp
 
 import (
 	"fmt"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/xtaci/kcp-go"
-	"goutil/basic/gerrors"
 	"net"
 	"time"
 )

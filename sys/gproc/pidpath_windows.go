@@ -1,6 +1,6 @@
 package gproc
 
-import "goutil/basic/gerrors"
+import "github.com/davidforest123/goutil/basic/gerrors"
 
 // TODO
 func GetExePathFromPid(pid int) (path string, err error) {

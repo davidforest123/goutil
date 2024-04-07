@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/chromedp/cdproto/dom"
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"io/ioutil"
 	"math"
 	"time"

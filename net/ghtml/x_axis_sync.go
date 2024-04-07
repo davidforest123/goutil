@@ -1,8 +1,8 @@
 package ghtml
 
 import (
-	"goutil/basic/gerrors"
-	"goutil/sys/gtime"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/sys/gtime"
 	"time"
 )
 

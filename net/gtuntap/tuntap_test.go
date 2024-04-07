@@ -2,7 +2,7 @@ package gtuntap
 
 import (
 	"fmt"
-	"goutil/net/gnet"
+	"github.com/davidforest123/goutil/net/gnet"
 	"net"
 	"testing"
 )

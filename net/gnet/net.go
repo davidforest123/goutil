@@ -1,9 +1,9 @@
 package gnet
 
 import (
-	"goutil/basic/gerrors"
-	"goutil/net/gkcp"
-	"goutil/net/gquic"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/net/gkcp"
+	"github.com/davidforest123/goutil/net/gquic"
 	"net"
 	"strings"
 )

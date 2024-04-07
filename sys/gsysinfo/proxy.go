@@ -1,6 +1,6 @@
 package gsysinfo
 
-// https://github.com/okelet/goutils/blob/4585eaae84d2dc05f02ea33fb585b78de299f041/proxy_utils.go
+// https://github.com/okelet/github.com/davidforest123/goutils/blob/4585eaae84d2dc05f02ea33fb585b78de299f041/proxy_utils.go
 // https://stackoverflow.com/questions/36127254/change-proxy-on-mac-osx-programmatically
 // https://developer.apple.com/documentation/networkextension/neproxysettings/1406766-proxyautoconfigurationjavascript
 // https://github.com/universonic/shadowsocks-macos/blob/0d7d213b22864ca9712e23918341288efc072f22/Shadowsocks/ProxyConfHelper.m

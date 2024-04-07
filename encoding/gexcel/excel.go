@@ -4,9 +4,9 @@ import (
 	"archive/zip"
 	"bytes"
 	"fmt"
+	"github.com/davidforest123/goutil/sys/gfs"
 	"github.com/extrame/xls"
 	"github.com/tealeg/xlsx"
-	"goutil/sys/gfs"
 	"strconv"
 	"strings"
 )

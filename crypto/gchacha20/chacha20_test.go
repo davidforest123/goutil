@@ -2,9 +2,9 @@ package gchacha20
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/basic/gtest"
-	"goutil/crypto/gcrypto"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gtest"
+	"github.com/davidforest123/goutil/crypto/gcrypto"
 	"io"
 	"log"
 	"os"

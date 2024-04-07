@@ -1,8 +1,8 @@
 package xonline
 
 import (
-	"goutil/container/gstring"
-	"goutil/net/ghttp"
+	"github.com/davidforest123/goutil/container/gstring"
+	"github.com/davidforest123/goutil/net/ghttp"
 	"time"
 )
 

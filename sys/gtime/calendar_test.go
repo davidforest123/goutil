@@ -1,7 +1,7 @@
 package gtime
 
 import (
-	"goutil/basic/gtest"
+	"github.com/davidforest123/goutil/basic/gtest"
 	"testing"
 	"time"
 )

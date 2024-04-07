@@ -1,7 +1,7 @@
 package gcounter
 
 import (
-	"goutil/container/gnum"
+	"github.com/davidforest123/goutil/container/gnum"
 	"testing"
 )
 

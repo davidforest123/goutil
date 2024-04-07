@@ -3,7 +3,7 @@ package gcryptfmt
 import (
 	"bytes"
 	"encoding/hex"
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"math/big"
 )
 

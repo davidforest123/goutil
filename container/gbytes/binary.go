@@ -3,8 +3,8 @@ package gbytes
 import (
 	"bytes"
 	"encoding/binary"
-	"goutil/basic/gerrors"
-	"goutil/container/gany"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gany"
 	"unsafe"
 )
 

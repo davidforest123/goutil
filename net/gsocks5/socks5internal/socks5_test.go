@@ -3,7 +3,7 @@ package socks5internal
 import (
 	"bytes"
 	"encoding/binary"
-	"goutil/basic/glog"
+	"github.com/davidforest123/goutil/basic/glog"
 	"io"
 	"net"
 	"testing"

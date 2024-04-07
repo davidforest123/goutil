@@ -2,11 +2,11 @@ package gdebug
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
-	"goutil/basic/glog"
-	"goutil/container/grand"
-	"goutil/sys/gfs"
-	"goutil/sys/gproc"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/glog"
+	"github.com/davidforest123/goutil/container/grand"
+	"github.com/davidforest123/goutil/sys/gfs"
+	"github.com/davidforest123/goutil/sys/gproc"
 	"net/http"
 	"os/exec"
 	"strings"

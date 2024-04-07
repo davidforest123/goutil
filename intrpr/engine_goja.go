@@ -1,11 +1,11 @@
 package intrpr
 
 import (
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gany"
+	"github.com/davidforest123/goutil/intrpr/typescript"
 	"github.com/dop251/goja"
 	"github.com/dop251/goja/parser"
-	"goutil/basic/gerrors"
-	"goutil/container/gany"
-	"goutil/intrpr/typescript"
 )
 
 type (

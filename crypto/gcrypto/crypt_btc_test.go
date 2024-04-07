@@ -3,8 +3,8 @@ package gcrypto
 import (
 	"encoding/hex"
 	"fmt"
-	"goutil/basic/gtest"
-	"goutil/crypto/gcryptfmt"
+	"github.com/davidforest123/goutil/basic/gtest"
+	"github.com/davidforest123/goutil/crypto/gcryptfmt"
 	"testing"
 )
 

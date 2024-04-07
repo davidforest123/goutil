@@ -3,8 +3,8 @@ package intrpr
 import (
 	"context"
 	"github.com/d5/tengo/v2"
-	"goutil/basic/gerrors"
-	"goutil/container/gany"
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gany"
 	"reflect"
 )
 

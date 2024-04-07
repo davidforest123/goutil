@@ -2,7 +2,7 @@ package phantomgo
 
 import (
 	"fmt"
-	"goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/gerrors"
 	"io"
 	"net/http"
 	"os"

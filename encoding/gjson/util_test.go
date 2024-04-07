@@ -1,9 +1,9 @@
 package gjson
 
 import (
+	"github.com/davidforest123/goutil/basic/gtest"
+	"github.com/davidforest123/goutil/container/gstring"
 	"github.com/tidwall/gjson"
-	"goutil/basic/gtest"
-	"goutil/container/gstring"
 	"testing"
 )
 

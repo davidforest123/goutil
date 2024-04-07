@@ -3,8 +3,8 @@ package polyfit_test
 import (
 	"testing"
 
+	. "github.com/davidforest123/goutil/container/gpoly/polyfit"
 	"github.com/stretchr/testify/assert"
-	. "goutil/container/gpoly/polyfit"
 )
 
 func TestNewFitting(t *testing.T) {
