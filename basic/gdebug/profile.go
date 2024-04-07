@@ -1,0 +1,186 @@
+package gdebug
+
+import (
+	"bytes"
+	"fmt"
+	"github.com/google/pprof/profile"
+	"goutil/basic/gerrors"
+	"goutil/sys/gfs"
+	"io/ioutil"
+	"os"
+	"runtime/pprof"
+	"time"
+)
+
+/*
+Another manual method to use go tool pprof usage
+
+----- Program to debug side -----
+Start official pprof server in net/http/pprof
+
+----- Computer with go development env -----
+`go tool pprof http://xxx:yyy/debug/pprof/heap?debug=1`
+than, input
+`web`
+It will start browser to open svg report generated from pprof http server
+*/
+
+type (
+	Profile profile.Profile
+)
+
+// comes from net/http/pprof func Index(w http.ResponseWriter, r *http.Request)
+func getProfileCount() map[string]int {
+	result := make(map[string]int)
+	for _, p := range pprof.Profiles() {
+		result[p.Name()] = p.Count()
+	}
+	return result
+}
+
+// Capture captures profile and returns content.
+// FIXME I am not sure its result equals to web page output results.
+func Capture(profile string, cpuCapDur time.Duration) (*Profile, error) {
+	switch profile {
+	case "profile":
+		if cpuCapDur <= 0 {
+			cpuCapDur = 30 * time.Second
+		}
+		f := &bytes.Buffer{}
+		if err := pprof.StartCPUProfile(f); err != nil {
+			return nil, err
+		}
+		time.Sleep(cpuCapDur)
+		pprof.StopCPUProfile()
+		gfs.BytesToFile(f.Bytes(), fmt.Sprintf("cpu-profile-%s.txt", time.Now().String()))
+		return ParseProfile(f.Bytes())
+
+	case "heap", "block", "mutex", "allocs", "goroutine", "threadcreate":
+		f := &bytes.Buffer{}
+		if err := pprof.Lookup(profile).WriteTo(f, 2); err != nil {
+			return nil, err
+		}
+		gfs.BytesToFile(f.Bytes(), fmt.Sprintf("%s-profile-%s.txt", profile, time.Now().String()))
+		return ParseProfile(f.Bytes())
+
+	default:
+		return nil, gerrors.New("unsupported ProfileName %s", profile)
+	}
+}
+
+// CaptureToFile captures profile and save it to file.
+// Note: go tool pprof required.
+// FIXME I am not sure its result equals to web page output results.
+func CaptureToFile(profile string, cpuCapDur time.Duration) (string, error) {
+	newTemp := func() (*os.File, error) {
+		f, err := ioutil.TempFile("", "profile-")
+		if err != nil {
+			return nil, gerrors.New("Cannot create new temp profile file: %v", err)
+		}
+		return f, nil
+	}
+
+	switch profile {
+	case "profile":
+		if cpuCapDur <= 0 {
+			cpuCapDur = 30 * time.Second
+		}
+		f, err := newTemp()
+		if err != nil {
+			return "", err
+		}
+		defer f.Close()
+		if err := pprof.StartCPUProfile(f); err != nil {
+			return "", err
+		}
+		time.Sleep(cpuCapDur)
+		pprof.StopCPUProfile()
+		return f.Name(), nil
+
+	case "heap", "block", "mutex", "allocs", "goroutine", "threadcreate":
+		f, err := newTemp()
+		if err != nil {
+			return "", err
+		}
+		defer f.Close()
+		if err := pprof.Lookup(profile).WriteTo(f, 2); err != nil {
+			return "", err
+		}
+		return f.Name(), nil
+
+	default:
+		return "", gerrors.New("unsupported ProfileName %s", profile)
+	}
+}
+
+// ParseProfile parses buffer into Profile
+func ParseProfile(b []byte) (*Profile, error) {
+	result, err := profile.ParseData(b)
+	if err != nil {
+		return nil, err
+	}
+	return (*Profile)(result), nil
+}
+
+// VerifyProfile verify if b is valid profile content.
+func VerifyProfile(b []byte) error {
+	_, err := profile.ParseData(b)
+	return err
+}
+
+/*
+// ToDotGraph convert profile to dot graph,
+// which is an image format created by Graphviz.
+func (p *Profile) ToDotGraph() ([]byte, error) {
+	buf := bytes.Buffer{}
+	if err := (*profile.Profile)(p).Write(&buf); err != nil {
+		return nil, err
+	}
+
+	result := bytes.Buffer{}
+	err := driver.PProf(&driver.Options{
+		Fetch:   &fetcher{b: buf.Bytes()},
+		Flagset: newFlagSet("-dot"),
+		UI:      &fakeUI{},
+		Writer:  &writer{&result},
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.Bytes(), nil
+}
+
+// ToSvg convert profile to SVG image.
+// FIXME: output image is totally different from "go tool pprof -svg -output imagePath binaryPath profilePath"
+func (p *Profile) ToSvg() ([]byte, error) {
+	buf := bytes.Buffer{}
+	if err := (*profile.Profile)(p).Write(&buf); err != nil {
+		return nil, err
+	}
+
+	tempFile, err := newTemp()
+	if err != nil {
+		return nil, err
+	}
+	tempPath := tempFile.Name()
+	tempFile.Close()
+
+	selfPath, err := gproc.SelfPath()
+	if err != nil {
+		return nil, err
+	}
+
+	result := bytes.Buffer{}
+	err = driver.PProf(&driver.Options{
+		Fetch:   newFetcher(buf.Bytes()),
+//-output=*** is necessary, it no output argument, will report error
+		Flagset: newFlagSet("-svg", "-output="+tempPath, "-source_path="+selfPath),
+		UI:      newFakeUI(),
+		Writer:  newWriter(&result),
+	})
+	if err != nil {
+		return nil, err
+	}
+	return result.Bytes(), nil
+}
+*/
