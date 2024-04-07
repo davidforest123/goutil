@@ -1,4 +1,4 @@
-module github.com/davidforest/goutil
+module github.com/davidforest123/goutil
 
 go 1.19
 
