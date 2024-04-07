@@ -3,16 +3,16 @@ package gconfig
 import (
 	"encoding/json"
 	"fmt"
+	"path/filepath"
+	"reflect"
+	"strings"
+
 	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/davidforest123/goutil/container/gstring"
-	"github.com/davidforest123/goutil/crypto/gfes"
 	"github.com/davidforest123/goutil/encoding/gjson"
 	"github.com/davidforest123/goutil/sys/gfs"
 	"github.com/davidforest123/goutil/sys/gsysinfo"
 	"github.com/gocarina/gocsv"
-	"path/filepath"
-	"reflect"
-	"strings"
 )
 
 type (
@@ -81,14 +81,14 @@ func (c *Client) cryptFn(method, key string, val interface{}) (newVal interface{
 			return nil, false, nil
 		}
 		if method == "encrypt" {
-			cipher, err := gfes.TriMartolodEncrypt(val.(string), c.password, c.salt)
+			cipher, err := configTriMartolodEncrypt(val.(string), c.password, c.salt)
 			if err != nil {
 				return nil, false, gerrors.Wrap(err, fmt.Sprintf("%s key %s", method, key))
 			} else {
 				return cipher, true, nil
 			}
 		} else if method == "decrypt" {
-			plain, err := gfes.TriMartolodDecrypt(val.(string), c.password, c.salt)
+			plain, err := configTriMartolodDecrypt(val.(string), c.password, c.salt)
 			if err == nil {
 				return plain, true, nil
 			}
