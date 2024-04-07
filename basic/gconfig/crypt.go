@@ -7,6 +7,10 @@ import (
 	"github.com/davidforest123/goutil/crypto/ghash"
 )
 
+const (
+	head = "1024"
+)
+
 func configMartolodEncrypt(plain []byte, userSecret, saltSecret string) ([]byte, error) {
 	if len(plain) == 0 {
 		return nil, gerrors.New("empty plain")
