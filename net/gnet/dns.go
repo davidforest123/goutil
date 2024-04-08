@@ -10,7 +10,6 @@ import (
 	"sync"
 	"time"
 
-	"github.com/AdguardTeam/dnsproxy/internal/bootstrap"
 	"github.com/AdguardTeam/dnsproxy/upstream"
 	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/davidforest123/goutil/container/gany"
@@ -62,7 +61,7 @@ func newBootstrap(ip net.IP) *bootstrapClient {
 	return &bootstrapClient{ip: ip}
 }
 
-func (b *bootstrapClient) LookupNetIP(ctx context.Context, network bootstrap.Network, host string) (addrs []netip.Addr, err error) {
+func (b *bootstrapClient) LookupNetIP(ctx context.Context, network string, host string) (addrs []netip.Addr, err error) {
 	addr, err := netip.ParseAddr(b.ip.String())
 	if err != nil {
 		return nil, err
