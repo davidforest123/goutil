@@ -3,12 +3,14 @@ package gnet
 import (
 	"context"
 	"net"
+	"net/netip"
 	"os/exec"
 	"runtime"
 	"strings"
 	"sync"
 	"time"
 
+	"github.com/AdguardTeam/dnsproxy/internal/bootstrap"
 	"github.com/AdguardTeam/dnsproxy/upstream"
 	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/davidforest123/goutil/container/gany"
@@ -37,6 +39,10 @@ type (
 		sync.RWMutex
 	}
 
+	bootstrapClient struct {
+		ip net.IP
+	}
+
 	LookupIPRequiredFunc = func(host string) bool
 	LookupIPWithCtxFunc  = func(ctx context.Context, host string) ([]net.IP, error)
 )
@@ -50,6 +56,18 @@ func NewDNSClient() *DNSClient {
 	return &DNSClient{
 		customDNSServers: map[string]dnsSrv{},
 	}
+}
+
+func newBootstrap(ip net.IP) *bootstrapClient {
+	return &bootstrapClient{ip: ip}
+}
+
+func (b *bootstrapClient) LookupNetIP(ctx context.Context, network bootstrap.Network, host string) (addrs []netip.Addr, err error) {
+	addr, err := netip.ParseAddr(b.ip.String())
+	if err != nil {
+		return nil, err
+	}
+	return []netip.Addr{addr}, nil
 }
 
 // AddCustomDNSServer adds new custom DNS server.
@@ -77,6 +95,7 @@ func (dl *DNSClient) AddCustomDNSServer(host string) error {
 		if netIP == nil {
 			return gerrors.New("invalid IP %s", host)
 		}
+		opts.Bootstrap = newBootstrap(netIP)
 		//opts.ServerIPAddrs = []net.IP{netIP}
 	}
 
