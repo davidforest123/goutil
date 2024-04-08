@@ -5,10 +5,14 @@ import (
 	"net"
 	"os/exec"
 	"runtime"
+	"strings"
 	"sync"
+	"time"
 
-	//"github.com/AdguardTeam/dnsproxy/upstream"
+	"github.com/AdguardTeam/dnsproxy/upstream"
 	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gany"
+	"github.com/davidforest123/goutil/container/gstring"
 	"github.com/miekg/dns"
 )
 
@@ -24,7 +28,7 @@ type (
 
 	dnsSrv struct {
 		host string
-		//u    upstream.Upstream
+		u    upstream.Upstream
 	}
 
 	DNSClient struct {
@@ -62,7 +66,6 @@ func NewDNSClient() *DNSClient {
 //
 // More public DNS servers:
 // https://github.com/DNSCrypt/dnscrypt-resolvers/blob/master/v3/public-resolvers.md
-/*
 func (dl *DNSClient) AddCustomDNSServer(host string) error {
 	opts := &upstream.Options{
 		Timeout:            time.Duration(10) * time.Second,
@@ -74,7 +77,7 @@ func (dl *DNSClient) AddCustomDNSServer(host string) error {
 		if netIP == nil {
 			return gerrors.New("invalid IP %s", host)
 		}
-		opts.ServerIPAddrs = []net.IP{netIP}
+		//opts.ServerIPAddrs = []net.IP{netIP}
 	}
 
 	u, err := upstream.AddressToUpstream(host, opts)
@@ -88,7 +91,7 @@ func (dl *DNSClient) AddCustomDNSServer(host string) error {
 	}
 
 	return nil
-}*/
+}
 
 func (dl *DNSClient) RemoveCustomDNSServer(host, ip string) {
 	delete(dl.customDNSServers, host)
@@ -108,7 +111,6 @@ func (dl *DNSClient) UseSysDNSIfNoCustom(use bool) *DNSClient {
 	return dl
 }
 
-/*
 func (dl *DNSClient) LookupIP(host string) ([]net.IP, error) {
 	dl.RLock()
 	defer dl.RUnlock()
@@ -171,7 +173,7 @@ func (dl *DNSClient) LookupIP(host string) ([]net.IP, error) {
 		result = append(result, v)
 	}
 	return result, nil
-}*/
+}
 
 // LookupAddr looks up host names or domains by ip address from DNS server,
 // if no DNS server is set up locally, then a query request will be sent to
