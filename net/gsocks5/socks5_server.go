@@ -1,19 +1,20 @@
 package gsocks5
 
 import (
+	"net"
+
 	"github.com/davidforest123/goutil/basic/glog"
 	"github.com/davidforest123/goutil/net/gnet"
 	"github.com/davidforest123/goutil/net/gsocks5/socks5internal"
-	"net"
 )
 
 type (
 	Server struct {
-		srv         *socks5internal.Server
-		log         glog.Interface
+		srv *socks5internal.Server
+		/*log         glog.Interface
 		dialer      gnet.DialWithCtxFunc
 		dnsRequire  gnet.LookupIPRequiredFunc
-		dnsResolver gnet.LookupIPWithCtxFunc
+		dnsResolver gnet.LookupIPWithCtxFunc*/
 	}
 )
 
@@ -23,7 +24,7 @@ func NewServer() (*Server, error) {
 	s := &Server{}
 
 	conf := &socks5internal.Config{}
-	if s.dialer != nil {
+	/*if s.dialer != nil {
 		conf.Dial = s.dialer
 	}
 	if s.dnsRequire != nil {
@@ -36,7 +37,7 @@ func NewServer() (*Server, error) {
 		conf.Log = s.log
 	} else {
 		conf.Log = glog.DefaultLogger
-	}
+	}*/
 	err := error(nil)
 	s.srv, err = socks5internal.New(conf)
 	if err != nil {
@@ -48,7 +49,8 @@ func NewServer() (*Server, error) {
 // SetCustomDialer sets custom dialer for requests.
 // This operation is optional.
 func (s *Server) SetCustomDialer(dialer gnet.DialWithCtxFunc) {
-	s.dialer = dialer
+	//s.dialer = dialer
+	s.srv.SetCustomDialer(dialer)
 }
 
 // SetCustomDNSResolver sets custom DNS resolver for requests.
@@ -56,12 +58,14 @@ func (s *Server) SetCustomDialer(dialer gnet.DialWithCtxFunc) {
 // dnsRequire: check whether dns-lookup required, if false, dnsResolver will not be called,
 // and domain (but not net.IP) will be sent to custom dialer, and user want to do dns-lookup in custom dialer callback.
 func (s *Server) SetCustomDNSResolver(dnsRequire gnet.LookupIPRequiredFunc, dnsResolver gnet.LookupIPWithCtxFunc) {
-	s.dnsRequire = dnsRequire
-	s.dnsResolver = dnsResolver
+	//s.dnsRequire = dnsRequire
+	//s.dnsResolver =
+	s.srv.SetCustomDNSResolver(dnsRequire, dnsResolver)
 }
 
 func (s *Server) SetCustomLogger(log glog.Interface) {
-	s.log = log
+	//s.log = log
+	s.srv.SetCustomLogger(log)
 }
 
 // ServeAddr listen TCP at `listenAddr` and serves the net.Listener as Socks5 proxy server.

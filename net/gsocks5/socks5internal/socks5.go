@@ -3,10 +3,11 @@ package socks5internal
 import (
 	"bufio"
 	"fmt"
+	"net"
+
 	"github.com/davidforest123/goutil/basic/glog"
 	"github.com/davidforest123/goutil/net/gnet"
 	"golang.org/x/net/context"
-	"net"
 )
 
 // Config is used to setup and configure a Server
@@ -100,6 +101,26 @@ func New(conf *Config) (*Server, error) {
 	}
 
 	return server, nil
+}
+
+// SetCustomDialer sets custom dialer for requests.
+// This operation is optional.
+func (s *Server) SetCustomDialer(dialer gnet.DialWithCtxFunc) {
+	s.config.Dial = dialer
+}
+
+// SetCustomDNSResolver sets custom DNS resolver for requests.
+// This operation is optional.
+// dnsRequire: check whether dns-lookup required, if false, dnsResolver will not be called,
+// and domain (but not net.IP) will be sent to custom dialer, and user want to do dns-lookup in custom dialer callback.
+func (s *Server) SetCustomDNSResolver(dnsRequire gnet.LookupIPRequiredFunc, dnsResolver gnet.LookupIPWithCtxFunc) {
+	s.config.ResolveRequire = dnsRequire
+	s.config.Resolver = dnsResolver
+}
+
+// SetCustomLogger sets custom logger
+func (s *Server) SetCustomLogger(log glog.Interface) {
+	s.config.Log = log
 }
 
 // ListenAndServe is used to create a listener and serve on it
