@@ -2,16 +2,17 @@ package socks5internal
 
 import (
 	"fmt"
-	"github.com/davidforest123/goutil/basic/gerrors"
-	"github.com/davidforest123/goutil/container/gany"
-	"github.com/davidforest123/goutil/net/gnet"
-	"github.com/davidforest123/goutil/sys/gio"
 	"io"
 	"net"
 	"strconv"
 	"strings"
 	"sync/atomic"
 	"time"
+
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gany"
+	"github.com/davidforest123/goutil/net/gnet"
+	"github.com/davidforest123/goutil/sys/gio"
 
 	"golang.org/x/net/context"
 )
@@ -125,27 +126,10 @@ func NewRequest(bufConn io.Reader) (*Request, error) {
 func (s *Server) handleRequest(req *Request, conn conn) error {
 	ctx := context.Background()
 
-	// Resolve the address if we have a FQDN
-	dest := req.DestAddr
-	if dest.FQDN != "" {
-		var addrList []net.IP
-		var errResolve error = nil
-		if s.config.ResolveRequire(dest.FQDN) {
-			addrList, errResolve = s.config.Resolver(ctx, dest.FQDN)
-			if errResolve == nil && len(addrList) == 0 {
-				errResolve = gerrors.New("LookupIP(%s) returns none IP", dest.FQDN)
-			}
-		}
-		if errResolve != nil {
-			if errReply := sendReply(conn, hostUnreachable, nil); errReply != nil {
-				return fmt.Errorf("Failed to send reply: %v", errReply)
-			}
-			return fmt.Errorf("Failed to resolve destination '%v': %v", dest.FQDN, errResolve)
-		}
-		if len(addrList) > 0 { // when addrList is empty, left dns lookup to custom dialer.
-			dest.IP = addrList[0]
-		}
-	}
+	// in the original version, it resolves the address for 'req.DestAddr.FQDN' if it != '',
+	// returned ip will be stored into 'req.DestAddr.IP',
+	// but this is not necessary, net.Dial(network, domain) in 's.handleConnect' also works,
+	// and you can customize DNS lookup behavior in 's.config.DustomDialer'.
 
 	// Apply any address rewrites
 	req.realDestAddr = req.DestAddr
@@ -182,7 +166,7 @@ func (s *Server) handleConnect(ctx context.Context, conn conn, req *Request) err
 	}
 
 	// Attempt to connect
-	dial := s.config.Dial
+	dial := s.config.CustomDial
 	if dial == nil {
 		dial = func(ctx context.Context, net_, addr string) (net.Conn, error) {
 			return net.Dial(net_, addr)

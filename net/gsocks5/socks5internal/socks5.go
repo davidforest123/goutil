@@ -22,14 +22,6 @@ type Config struct {
 	// and AUthMethods is nil, then "auth-less" mode is enabled.
 	Credentials CredentialStore
 
-	// ResolveRequire checks whether dns-lookup required, if false, Resolver will not be called,
-	// and domain (but not net.IP) will be sent to custom Resolver, and user want to do dns-lookup in custom dialer callback.
-	ResolveRequire gnet.LookupIPRequiredFunc
-
-	// Resolver can be provided to do custom name resolution.
-	// Defaults to SysDNSResolver if not provided.
-	Resolver gnet.LookupIPWithCtxFunc
-
 	// Rules is provided to enable custom logic around permitting
 	// various commands. If not provided, PermitAll is used.
 	Rules RuleSet
@@ -49,7 +41,8 @@ type Config struct {
 	aliveProxy int64
 
 	// Optional function for dialing out
-	Dial func(ctx context.Context, network, addr string) (net.Conn, error)
+	// Users can customize DNS lookup behavior in 'CustomDial'.
+	CustomDial func(ctx context.Context, network, addr string) (net.Conn, error)
 }
 
 // Server is reponsible for accepting connections and handling
@@ -57,11 +50,6 @@ type Config struct {
 type Server struct {
 	config      *Config
 	authMethods map[uint8]Authenticator
-}
-
-func sysDNSLookup(ctx context.Context, host string) ([]net.IP, error) {
-	glog.Infof("system DNS lookup %s", host)
-	return net.LookupIP(host)
 }
 
 // New creates a new Server and potentially returns an error
@@ -73,11 +61,6 @@ func New(conf *Config) (*Server, error) {
 		} else {
 			conf.AuthMethods = []Authenticator{&NoAuthAuthenticator{}}
 		}
-	}
-
-	// Ensure we have a DNS resolver
-	if conf.Resolver == nil {
-		conf.Resolver = sysDNSLookup
 	}
 
 	// Ensure we have a rule set
@@ -103,19 +86,11 @@ func New(conf *Config) (*Server, error) {
 	return server, nil
 }
 
-// SetCustomDialer sets custom dialer for requests.
+// SetCustomDialer sets custom dialer for requests,
+// users can customize DNS lookup behavior in 'dialer'.
 // This operation is optional.
 func (s *Server) SetCustomDialer(dialer gnet.DialWithCtxFunc) {
-	s.config.Dial = dialer
-}
-
-// SetCustomDNSResolver sets custom DNS resolver for requests.
-// This operation is optional.
-// dnsRequire: check whether dns-lookup required, if false, dnsResolver will not be called,
-// and domain (but not net.IP) will be sent to custom dialer, and user want to do dns-lookup in custom dialer callback.
-func (s *Server) SetCustomDNSResolver(dnsRequire gnet.LookupIPRequiredFunc, dnsResolver gnet.LookupIPWithCtxFunc) {
-	s.config.ResolveRequire = dnsRequire
-	s.config.Resolver = dnsResolver
+	s.config.CustomDial = dialer
 }
 
 // SetCustomLogger sets custom logger

@@ -11,10 +11,6 @@ import (
 type (
 	Server struct {
 		srv *socks5internal.Server
-		/*log         glog.Interface
-		dialer      gnet.DialWithCtxFunc
-		dnsRequire  gnet.LookupIPRequiredFunc
-		dnsResolver gnet.LookupIPWithCtxFunc*/
 	}
 )
 
@@ -24,20 +20,6 @@ func NewServer() (*Server, error) {
 	s := &Server{}
 
 	conf := &socks5internal.Config{}
-	/*if s.dialer != nil {
-		conf.Dial = s.dialer
-	}
-	if s.dnsRequire != nil {
-		conf.ResolveRequire = s.dnsRequire
-	}
-	if s.dnsResolver != nil {
-		conf.Resolver = s.dnsResolver
-	}
-	if s.log != nil {
-		conf.Log = s.log
-	} else {
-		conf.Log = glog.DefaultLogger
-	}*/
 	err := error(nil)
 	s.srv, err = socks5internal.New(conf)
 	if err != nil {
@@ -46,25 +28,14 @@ func NewServer() (*Server, error) {
 	return s, nil
 }
 
-// SetCustomDialer sets custom dialer for requests.
+// SetCustomDialer sets custom dialer for requests,
+// users can customize DNS lookup behavior in 'dialer'.
 // This operation is optional.
 func (s *Server) SetCustomDialer(dialer gnet.DialWithCtxFunc) {
-	//s.dialer = dialer
 	s.srv.SetCustomDialer(dialer)
 }
 
-// SetCustomDNSResolver sets custom DNS resolver for requests.
-// This operation is optional.
-// dnsRequire: check whether dns-lookup required, if false, dnsResolver will not be called,
-// and domain (but not net.IP) will be sent to custom dialer, and user want to do dns-lookup in custom dialer callback.
-func (s *Server) SetCustomDNSResolver(dnsRequire gnet.LookupIPRequiredFunc, dnsResolver gnet.LookupIPWithCtxFunc) {
-	//s.dnsRequire = dnsRequire
-	//s.dnsResolver =
-	s.srv.SetCustomDNSResolver(dnsRequire, dnsResolver)
-}
-
 func (s *Server) SetCustomLogger(log glog.Interface) {
-	//s.log = log
 	s.srv.SetCustomLogger(log)
 }
 
