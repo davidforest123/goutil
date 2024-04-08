@@ -22,10 +22,11 @@ IPV4的保留地址汇总
 
 import (
 	"encoding/binary"
-	"github.com/davidforest123/goutil/basic/gerrors"
-	"github.com/davidforest123/goutil/container/gconv"
 	"net"
 	"strings"
+
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gconv"
 )
 
 type (
@@ -181,6 +182,11 @@ func (ip IP) IsAny() bool {
 
 func IsIPString(s string) bool {
 	_, err := ParseIP(s)
+	return err == nil
+}
+
+func IsIPPortString(s string) bool {
+	_, err := ParseIPPort(s)
 	return err == nil
 }
 
