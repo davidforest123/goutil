@@ -1,11 +1,11 @@
 package gnet
 
 import (
-	"github.com/davidforest123/goutil/basic/gerrors"
-	"github.com/davidforest123/goutil/net/gkcp"
-	"github.com/davidforest123/goutil/net/gquic"
 	"net"
 	"strings"
+
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/net/gkcp"
 )
 
 // Dial multiple protocols.
@@ -17,8 +17,8 @@ func Dial(network, address string) (net.Conn, error) {
 		return net.Dial("udp", address)
 	case "kcp":
 		return gkcp.Dial(address)
-	case "quic":
-		return gquic.Dial(address)
+	//case "quic":
+	//	return gquic.Dial(address)
 	default:
 		return nil, gerrors.New("unsupported network %s", network)
 	}
@@ -31,8 +31,8 @@ func ListenCop(network, addr string) (net.Listener, error) {
 		return net.Listen(network, addr)
 	case "kcp":
 		return gkcp.Listen(addr)
-	case "quic":
-		return gquic.Listen(addr)
+	//case "quic":
+	//	return gquic.Listen(addr)
 	default:
 		return nil, gerrors.New("unsupported network %s", network)
 	}
