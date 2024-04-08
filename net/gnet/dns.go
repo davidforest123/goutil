@@ -2,6 +2,7 @@ package gnet
 
 import (
 	"context"
+	"fmt"
 	"net"
 	"net/netip"
 	"os/exec"
@@ -95,9 +96,11 @@ func (dl *DNSClient) AddCustomDNSServer(host string) error {
 			return gerrors.New("invalid IP %s", host)
 		}
 		opts.Bootstrap = newBootstrap(netIP)
+		fmt.Println("ip", netIP.String())
 		//opts.ServerIPAddrs = []net.IP{netIP}
 	}
 
+	fmt.Println("host:", host)
 	u, err := upstream.AddressToUpstream(host, opts)
 	if err != nil {
 		return gerrors.New("Cannot create an upstream: %s", err.Error())
