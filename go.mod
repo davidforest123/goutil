@@ -1,13 +1,13 @@
 module github.com/davidforest123/goutil
 
-go 1.19
+go 1.22.2
 
 require (
 	cloud.google.com/go/billing v1.17.4
 	cloud.google.com/go/cloudtasks v1.12.3
 	cloud.google.com/go/compute v1.23.3
 	cloud.google.com/go/storage v1.34.1
-	github.com/AdguardTeam/dnsproxy v0.51.0
+	github.com/AdguardTeam/dnsproxy v0.68.0
 	github.com/Azure/azure-sdk-for-go v68.0.0+incompatible
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.8.0
 	github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.4.0
@@ -42,8 +42,8 @@ require (
 	github.com/btcsuite/btcd/btcutil v1.1.3
 	github.com/cavaliergopher/grab/v3 v3.0.1
 	github.com/ccding/go-stun v0.1.4
-	github.com/chromedp/cdproto v0.0.0-20230716001748-3ed7c525ec8b
-	github.com/chromedp/chromedp v0.9.1
+	github.com/chromedp/cdproto v0.0.0-20230802225258-3cf4e6d46a89
+	github.com/chromedp/chromedp v0.9.2
 	github.com/clarkmcc/go-typescript v0.6.0
 	github.com/d5/tengo/v2 v2.13.0
 	github.com/domainr/whois v0.1.0
@@ -68,7 +68,7 @@ require (
 	github.com/gocarina/gocsv v0.0.0-20230616125104-99d496ca653d
 	github.com/golang/snappy v0.0.4
 	github.com/google/gopacket v1.1.19
-	github.com/google/pprof v0.0.0-20230705174524-200ffdc848b8
+	github.com/google/pprof v0.0.0-20240130152714-0ed6a68c8d9e
 	github.com/google/uuid v1.4.0
 	github.com/gorilla/websocket v1.5.0
 	github.com/goware/urlx v0.3.2
@@ -93,7 +93,7 @@ require (
 	github.com/markcheno/go-talib v0.0.0-20190307022042-cd53a9264d70
 	github.com/mcuadros/go-version v0.0.0-20190830083331-035f6764e8d2
 	github.com/melbahja/goph v1.3.0
-	github.com/miekg/dns v1.1.55
+	github.com/miekg/dns v1.1.58
 	github.com/mikaa123/imapmq v0.0.0-20161104140140-bd5a5602fd52
 	github.com/mohong122/ip2region v0.0.0-20190505055455-f4ef24f6b03d
 	github.com/mssola/user_agent v0.5.3
@@ -114,7 +114,7 @@ require (
 	github.com/shopspring/decimal v1.3.1
 	github.com/sirupsen/logrus v1.8.1
 	github.com/songgao/water v0.0.0-20200317203138-2b4b6d7c09d8
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.9.0
 	github.com/sttts/color v0.0.0-20141121201513-88cfedb834b6
 	github.com/takama/daemon v1.0.0
 	github.com/taruti/langdetect v0.0.0-20160316071627-327bfa898307
@@ -135,11 +135,11 @@ require (
 	github.com/yeka/zip v0.0.0-20180914125537-d046722c6feb
 	github.com/yl2chen/cidranger v1.0.2
 	go.mongodb.org/mongo-driver v1.11.0
-	golang.org/x/crypto v0.14.0
-	golang.org/x/net v0.17.0
-	golang.org/x/sys v0.13.0
-	golang.org/x/text v0.13.0
-	gonum.org/v1/gonum v0.12.0
+	golang.org/x/crypto v0.21.0
+	golang.org/x/net v0.23.0
+	golang.org/x/sys v0.18.0
+	golang.org/x/text v0.14.0
+	gonum.org/v1/gonum v0.14.0
 	google.golang.org/api v0.149.0
 	google.golang.org/grpc v1.59.0
 	google.golang.org/protobuf v1.31.0
@@ -150,7 +150,7 @@ require (
 	cloud.google.com/go v0.110.9 // indirect
 	cloud.google.com/go/compute/metadata v0.2.3 // indirect
 	cloud.google.com/go/iam v1.1.4 // indirect
-	github.com/AdguardTeam/golibs v0.13.4 // indirect
+	github.com/AdguardTeam/golibs v0.23.0 // indirect
 	github.com/Azure/azure-pipeline-go v0.2.3 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/internal v1.3.0 // indirect
 	github.com/Azure/go-autorest v14.2.0+incompatible // indirect
@@ -224,7 +224,6 @@ require (
 	github.com/golang-jwt/jwt/v5 v5.0.0 // indirect
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
-	github.com/golang/mock v1.6.0 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/google/s2a-go v0.1.7 // indirect
@@ -254,7 +253,7 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/mxk/go-imap v0.0.0-20150429134902-531c36c3f12d // indirect
-	github.com/onsi/ginkgo/v2 v2.11.0 // indirect
+	github.com/onsi/ginkgo/v2 v2.15.0 // indirect
 	github.com/opentracing/opentracing-go v1.2.1-0.20220228012449-10b1cf09e00b // indirect
 	github.com/otiai10/gosseract v2.2.1+incompatible // indirect
 	github.com/oxtoacart/bpool v0.0.0-20190530202638-03653db5a59c // indirect
@@ -263,9 +262,7 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/power-devops/perfstat v0.0.0-20210106213030-5aafc221ea8c // indirect
 	github.com/quic-go/qpack v0.4.0 // indirect
-	github.com/quic-go/qtls-go1-19 v0.3.2 // indirect
-	github.com/quic-go/qtls-go1-20 v0.2.2 // indirect
-	github.com/quic-go/quic-go v0.36.1 // indirect
+	github.com/quic-go/quic-go v0.41.0 // indirect
 	github.com/richardlehane/match v1.0.0 // indirect
 	github.com/richardlehane/mscfb v1.0.1 // indirect
 	github.com/richardlehane/msoleps v1.0.1 // indirect
@@ -298,13 +295,14 @@ require (
 	github.com/yusufpapurcu/wmi v1.2.2 // indirect
 	github.com/zonedb/zonedb v1.0.3544 // indirect
 	go.opencensus.io v0.24.0 // indirect
-	golang.org/x/exp v0.0.0-20230713183714-613f0c0eb8a1 // indirect
-	golang.org/x/image v0.0.0-20220302094943-723b81ca9867 // indirect
-	golang.org/x/mod v0.12.0 // indirect
+	go.uber.org/mock v0.4.0 // indirect
+	golang.org/x/exp v0.0.0-20240325151524-a685a6edb6d8 // indirect
+	golang.org/x/image v0.6.0 // indirect
+	golang.org/x/mod v0.16.0 // indirect
 	golang.org/x/oauth2 v0.13.0 // indirect
-	golang.org/x/sync v0.4.0 // indirect
+	golang.org/x/sync v0.6.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
-	golang.org/x/tools v0.11.0 // indirect
+	golang.org/x/tools v0.19.0 // indirect
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 	google.golang.org/genproto v0.0.0-20231030173426-d783a09b4405 // indirect
