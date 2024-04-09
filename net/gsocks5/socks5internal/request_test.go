@@ -3,11 +3,12 @@ package socks5internal
 import (
 	"bytes"
 	"encoding/binary"
-	"github.com/davidforest123/goutil/basic/glog"
 	"io"
 	"net"
 	"strings"
 	"testing"
+
+	"github.com/davidforest123/goutil/basic/glog"
 )
 
 type MockConn struct {
@@ -49,9 +50,8 @@ func TestRequest_Connect(t *testing.T) {
 
 	// Make server
 	s := &Server{config: &Config{
-		Rules:    PermitAll(),
-		Resolver: sysDNSLookup,
-		Log:      glog.DefaultLogger,
+		Rules: PermitAll(),
+		Log:   glog.DefaultLogger,
 	}}
 
 	// Create the connect request
@@ -124,9 +124,8 @@ func TestRequest_Connect_RuleFail(t *testing.T) {
 
 	// Make server
 	s := &Server{config: &Config{
-		Rules:    PermitNone(),
-		Resolver: sysDNSLookup,
-		Log:      glog.DefaultLogger,
+		Rules: PermitNone(),
+		Log:   glog.DefaultLogger,
 	}}
 
 	// Create the connect request
