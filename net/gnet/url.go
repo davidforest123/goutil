@@ -44,7 +44,6 @@ const (
 	SchemeSocks5s
 	SchemeSocksHttp
 	SchemeSocksHttps
-	SchemeShadowsocks
 	/* custom schemes */
 	SchemeSvn
 	SchemeHg

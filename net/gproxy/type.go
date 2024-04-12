@@ -8,7 +8,6 @@ const (
 	PROXY_TYPE_SOCKS4
 	PROXY_TYPE_SOCKS4A
 	PROXY_TYPE_SOCKS5
-	PROXY_TYPE_SHADOWSOCKS
 )
 
 type ProxyType int
@@ -28,8 +27,6 @@ func (t ProxyType) String() string {
 		return "socks4"
 	case PROXY_TYPE_SOCKS5:
 		return "socks5"
-	case PROXY_TYPE_SHADOWSOCKS:
-		return "ss"
 	default:
 		return "unknown"
 	}
@@ -49,8 +46,6 @@ func ParseTypeString(s string) ProxyType {
 		return PROXY_TYPE_SOCKS4
 	case "socks5":
 		return PROXY_TYPE_SOCKS5
-	case "ss":
-		return PROXY_TYPE_SHADOWSOCKS
 	default:
 		return PROXY_TYPE_UNKNOWN
 	}
