@@ -82,6 +82,8 @@ type (
 		MqSend(region string, queue string, msg string) error
 		MqReceive(region string, queue string, msgNum int, waitSeconds int, deleteAfterReceived bool) ([]Msg, error)
 		MqDeleteQueue(region string, queue string) error
+		//TranslateList(region string) ([][2]string, error)
+		//TranslateDo(region, text, from, to string) (string, error)
 		Close() error
 	}
 
