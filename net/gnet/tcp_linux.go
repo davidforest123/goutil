@@ -6,7 +6,6 @@ package gnet
 import "C"
 
 import (
-	"github.com/davidforest123/goutil/basic/gerrors"
 	"net"
 	"syscall"
 )
@@ -38,6 +37,7 @@ func EnableBBR(conn *net.TCPConn) error {
 	return syscallErr
 }
 
+/*
 // from https://github.com/m-lab/ndt-server/blob/21e2b93bf3ffa5f076b6d5bb70dab7207abc6397/bbr/bbr_linux.go#L23  getMaxBandwidthAndMinRTT
 func GetBBR(conn *net.TCPConn) (*BBRInfo, error) {
 	connFile, err := conn.File()
@@ -47,7 +47,7 @@ func GetBBR(conn *net.TCPConn) (*BBRInfo, error) {
 		}()
 	}
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	cci := C.union_tcp_cc_info{}
@@ -103,3 +103,4 @@ func GetBBR(conn *net.TCPConn) (*BBRInfo, error) {
 	metrics.CwndGain = uint32(bbrip.bbr_cwnd_gain)
 	return metrics, nil
 }
+*/
