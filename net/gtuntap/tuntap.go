@@ -2,15 +2,16 @@ package gtuntap
 
 import (
 	"fmt"
+	"io"
+	"net"
+	"runtime"
+	"strings"
+
 	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/davidforest123/goutil/net/gnet"
 	"github.com/davidforest123/goutil/sys/gcmd"
 	"github.com/davidforest123/goutil/sys/gio"
 	"github.com/songgao/water"
-	"io"
-	"net"
-	"runtime"
-	"strings"
 )
 
 type (
@@ -60,7 +61,7 @@ func (i *Iface) SudoSetup() error {
 		if i.ifce, err = water.New(config); err != nil {
 			return err
 		}
-		config.Name = i.Name() // on macOS, TUN name is NOT customizable, it is given automatically by the system.
+		setConfigName(&config, i.Name()) // on macOS, TUN name is NOT customizable, it is given automatically by the system.
 
 		// config IP, netmask, mtu... for created TUN interface.
 		// This operation will not only set the network information of the TUN, but also silently and automatically
@@ -81,7 +82,7 @@ func (i *Iface) SudoSetup() error {
 		if i.name == "" {
 			return gerrors.New("under linux tun device name can't be null")
 		}
-		config.Name = i.name
+		setConfigName(&config, i.Name())
 		err := error(nil)
 		if i.ifce, err = water.New(config); err != nil {
 			return err
@@ -108,6 +109,7 @@ func (i *Iface) SudoSetup() error {
 			DeviceType: water.TUN,
 		}
 		err := error(nil)
+		setConfigName(&config, i.Name())
 		if i.ifce, err = water.New(config); err != nil {
 			return err
 		}
