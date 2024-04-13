@@ -11,6 +11,16 @@ import (
 
 	"github.com/davidforest123/goutil/basic/gerrors"
 	"github.com/davidforest123/goutil/container/gstring"
+	"github.com/davidforest123/goutil/container/gternary"
+)
+
+type (
+	ProcessPathAs string
+)
+
+const (
+	AsDirOS     = ProcessPathAs("AsDirOS")
+	AsRuntimeOS = ProcessPathAs("AsRuntimeOS")
 )
 
 // base name: final element of the path, not the entire path.
@@ -106,11 +116,27 @@ func MoveFile(src, dst string) error {
 	return os.Rename(src, dst)
 }
 
-func AppendPathSeparatorIfNecessary(dir string) string {
-	if dir != "" && dir != "." && dir != ".." && dir[len(dir)-1] != os.PathSeparator {
-		return dir + string(os.PathSeparator)
+func AppendPathSeparatorIfNecessary(dir string, as ProcessPathAs) string {
+	switch as {
+	case AsDirOS:
+		pathOS, ok := DetectPathOS(dir)
+		if !ok {
+			panic(gerrors.New("AppendPathSeparatorIfNecessary=>DetectPathOS(%s) failed", dir))
+		}
+		seperator := gternary.If(pathOS == "windows").String("\\", "/")
+		if strings.HasSuffix(dir, seperator) {
+			return dir
+		} else {
+			return dir + seperator
+		}
+	case AsRuntimeOS:
+		if dir != "" && dir != "." && dir != ".." && dir[len(dir)-1] != os.PathSeparator {
+			return dir + string(os.PathSeparator)
+		}
+		return dir
+	default:
+		panic(gerrors.New("AppendPathSeparatorIfNecessary accept error param(%s)", as))
 	}
-	return dir
 }
 
 // WalkDirTopLevel lists the top level file/dir at dir, it will NOT scan any subdirectory in `dir`.
@@ -120,7 +146,10 @@ func WalkDirTopLevel(dir string) (dirs []string, files []string, err error) {
 		return nil, nil, err
 	}
 	for _, v := range entries {
-		fullPath := DirJoinFile(dir, v.Name())
+		fullPath, err := DirJoinFile(dir, v.Name())
+		if err != nil {
+			return nil, nil, err
+		}
 		if v.IsDir() {
 			dirs = append(dirs, fullPath)
 		} else {
