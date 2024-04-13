@@ -47,11 +47,15 @@ func NewClient(customConfigDir string) (*Client, error) {
 		return nil, err
 	}
 	for _, filename := range files {
+		glog.Infof("filename:%s", filename)
 		cfgKey := gfs.PathBase(filename)
 		if cfgKey == "" {
 			return nil, gerrors.New("invalid config key %s", cfgKey)
 		}
-		filename = gfs.DirJoinFile(cfgDir, filename)
+		filename, err = gfs.DirJoinFile(cfgDir, filename)
+		if err != nil {
+			return nil, err
+		}
 		glog.Infof("read config file:%s from %s", filename, cfgDir)
 		cfgVal, err := gfs.FileToString(filename)
 		if err != nil {
