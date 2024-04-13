@@ -58,13 +58,24 @@ func FileExits(filename string) bool {
 
 // Notice: PathJoin("/Users/tony", "test.js") = "/Users/test.js"
 // Notice: DirJoinFile("/Users/tony", "test.js") = "/Users/tony/test.js"
-// Combine absolute path and relative path to get a new absolute path
+// Combine absolute dir path and relative file path to get a new absolute file path
 func DirJoinFile(srcDir, targetPath string) string {
 	if path.IsAbs(targetPath) {
 		return targetPath
 	}
 	srcDir = AppendPathSeparatorIfNecessary(srcDir)
 	return path.Join(path.Dir(srcDir), targetPath)
+}
+
+// Notice: PathJoin("/Users/tony", "test.js") = "/Users/test.js"
+// Notice: DirJoinDir("/Users/tony", "test.js") = "/Users/tony/test.js/"
+// Combine absolute dir path and relative dir path to get a new absolute dir path
+func DirJoinDir(srcDir, targetPath string) string {
+	if path.IsAbs(targetPath) {
+		return targetPath
+	}
+	srcDir = AppendPathSeparatorIfNecessary(srcDir)
+	return AppendPathSeparatorIfNecessary(path.Join(path.Dir(srcDir), targetPath))
 }
 
 // PathBase returns last element of `path`.
