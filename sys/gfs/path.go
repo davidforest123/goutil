@@ -56,6 +56,22 @@ func FileExits(filename string) bool {
 	return !pi.IsFolder && pi.Exist
 }
 
+/*
+// IsAbs reports whether the path is absolute.
+func IsAbs(path string) bool {
+	isAbsUnix := len(path) > 0 && path[0] == '/'
+	pathLower := strings.ToLower(path)
+	isAbsWindows := false
+	if len(path) < 2 {
+		isAbsWindows = false
+	} else if len(path) == 2 {
+		isAbsWindows = (pathLower[0] >= 'a' && pathLower[0] <= 'z') && pathLower[1] == ':'
+	} else {
+		isAbsWindows = (pathLower[0] >= 'a' && pathLower[0] <= 'z') && pathLower[1] == ':' && pathLower[2] == '\\'
+	}
+	return isAbsUnix || isAbsWindows
+}*/
+
 // Notice: PathJoin("/Users/tony", "test.js") = "/Users/test.js"
 // Notice: DirJoinFile("/Users/tony", "test.js") = "/Users/tony/test.js"
 // Combine absolute dir path and relative file path to get a new absolute file path
@@ -64,7 +80,7 @@ func DirJoinFile(srcDir, targetPath string) string {
 		return targetPath
 	}
 	srcDir = AppendPathSeparatorIfNecessary(srcDir)
-	return path.Join(path.Dir(srcDir), targetPath)
+	return path.Join(srcDir, targetPath)
 }
 
 // Notice: PathJoin("/Users/tony", "test.js") = "/Users/test.js"
@@ -75,7 +91,7 @@ func DirJoinDir(srcDir, targetPath string) string {
 		return targetPath
 	}
 	srcDir = AppendPathSeparatorIfNecessary(srcDir)
-	return AppendPathSeparatorIfNecessary(path.Join(path.Dir(srcDir), targetPath))
+	return AppendPathSeparatorIfNecessary(path.Join(srcDir, targetPath))
 }
 
 // PathBase returns last element of `path`.
