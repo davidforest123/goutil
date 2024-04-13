@@ -182,7 +182,6 @@ func (c *Client) LoadAndStore(configFileName string, v interface{}, allowEmpty b
 // configFileName is config file short name with suffix, for example `myapp.json`.
 func (c *Client) ConfigFileExists(configFileName string) bool {
 	fileName := filepath.Join(c.cfgDir, configFileName)
-	glog.Infof("cfgDir(%s)configFileName(%s)fileName(%s)", c.cfgDir, configFileName, fileName)
 	return gfs.FileExits(fileName)
 }
 
