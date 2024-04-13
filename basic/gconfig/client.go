@@ -51,7 +51,7 @@ func NewClient(customConfigDir string) (*Client, error) {
 		if cfgKey == "" {
 			return nil, gerrors.New("invalid config key %s", cfgKey)
 		}
-		filename = gfs.DirAndPathJoin(cfgDir, filename)
+		filename = gfs.DirJoinFile(cfgDir, filename)
 		glog.Infof("read config file:%s", filename)
 		cfgVal, err := gfs.FileToString(filename)
 		if err != nil {

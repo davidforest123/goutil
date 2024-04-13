@@ -120,7 +120,7 @@ func WalkDirTopLevel(dir string) (dirs []string, files []string, err error) {
 		return nil, nil, err
 	}
 	for _, v := range entries {
-		fullPath := DirAndPathJoin(dir, v.Name())
+		fullPath := DirJoinFile(dir, v.Name())
 		if v.IsDir() {
 			dirs = append(dirs, fullPath)
 		} else {

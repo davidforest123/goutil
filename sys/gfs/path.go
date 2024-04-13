@@ -57,9 +57,9 @@ func FileExits(filename string) bool {
 }
 
 // Notice: PathJoin("/Users/tony", "test.js") = "/Users/test.js"
-// Notice: DirAndPathJoin("/Users/tony", "test.js") = "/Users/tony/test.js"
+// Notice: DirJoinFile("/Users/tony", "test.js") = "/Users/tony/test.js"
 // Combine absolute path and relative path to get a new absolute path
-func DirAndPathJoin(srcDir, targetPath string) string {
+func DirJoinFile(srcDir, targetPath string) string {
 	if path.IsAbs(targetPath) {
 		return targetPath
 	}
