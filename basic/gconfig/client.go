@@ -8,6 +8,7 @@ import (
 	"strings"
 
 	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/basic/glog"
 	"github.com/davidforest123/goutil/container/gstring"
 	"github.com/davidforest123/goutil/encoding/gjson"
 	"github.com/davidforest123/goutil/sys/gfs"
@@ -50,6 +51,7 @@ func NewClient(customConfigDir string) (*Client, error) {
 		if cfgKey == "" {
 			return nil, gerrors.New("invalid config key %s", cfgKey)
 		}
+		glog.Infof("read config file:%s", filename)
 		cfgVal, err := gfs.FileToString(filename)
 		if err != nil {
 			return nil, err
