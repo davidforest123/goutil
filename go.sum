@@ -408,6 +408,8 @@ github.com/getlantern/ops v0.0.0-20190325191751-d70cb0d6f85f h1:wrYrQttPS8FHIRSl
 github.com/getlantern/ops v0.0.0-20190325191751-d70cb0d6f85f/go.mod h1:D5ao98qkA6pxftxoqzibIBBrLSUli+kYnJqrgBf9cIA=
 github.com/getlantern/osversion v0.0.0-20190510010111-432ecec19031 h1:McfwCiwtcjceMKCpQjbJok70oEb7WfTd/LSr2ftlBJk=
 github.com/getlantern/osversion v0.0.0-20190510010111-432ecec19031/go.mod h1:DdqHyeV80gZ5JgAmTbMImotRfWSP0xRlxFSuMUDelY0=
+github.com/getlantern/osversion v0.0.0-20230401075644-c2a30e73c451 h1:3Nn0AqIlImbb0TE4oFhr4BETBZhRUPo9GuebHvMzWB4=
+github.com/getlantern/osversion v0.0.0-20230401075644-c2a30e73c451/go.mod h1:kaUdXyKE1Y8bwPnlN7ChFXWnkADpL0zZrk8F0XbpKcc=
 github.com/getlantern/pac v0.0.0-20161019162755-5534aa917168 h1:l/tyruTv3xnv0p9N2vHGleN8YJ2AQItATUAc2LFGKyQ=
 github.com/getlantern/pac v0.0.0-20161019162755-5534aa917168/go.mod h1:mbY1zpumNawT2dv/bnPe5lM3GVSjOqx5H2/ODmBoRmY=
 github.com/ghodss/yaml v1.0.0/go.mod h1:4dBDuWmgqj2HViK6kFavaiC9ZROes6MMH2rRYeMEF04=

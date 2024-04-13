@@ -57,7 +57,7 @@ require (
 	github.com/frankenbeanies/randhex v0.0.0-20191121050539-48f4de439ea4
 	github.com/gabriel-vasile/mimetype v1.4.1
 	github.com/getlantern/appdir v0.0.0-20200615192800-a0ef1968f4da
-	github.com/getlantern/osversion v0.0.0-20190510010111-432ecec19031
+	github.com/getlantern/osversion v0.0.0-20230401075644-c2a30e73c451
 	github.com/getlantern/pac v0.0.0-20161019162755-5534aa917168
 	github.com/gin-gonic/gin v1.8.1
 	github.com/globalsign/publicsuffix v0.0.0-20220930144140-c2cf46b4ccb7
