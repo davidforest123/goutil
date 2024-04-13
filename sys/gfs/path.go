@@ -2,12 +2,13 @@ package gfs
 
 import (
 	"fmt"
-	"github.com/davidforest123/goutil/basic/gerrors"
 	"os"
 	"path"
 	"path/filepath"
 	"strings"
 	"time"
+
+	"github.com/davidforest123/goutil/basic/gerrors"
 )
 
 type PathInfo struct {
@@ -55,14 +56,15 @@ func FileExits(filename string) bool {
 	return !pi.IsFolder && pi.Exist
 }
 
-// FIXME: PathJoin("/Users/tony", "test.js") = "/Users/test.js"，虽然这个结果和path.Join()相同，但是最好进行明确。所以，这个FIXME是否一定要修改，还不一定。
+// Notice: PathJoin("/Users/tony", "test.js") = "/Users/test.js"
+// Notice: DirAndPathJoin("/Users/tony", "test.js") = "/Users/tony/test.js"
 // Combine absolute path and relative path to get a new absolute path
-func PathJoin(source, target string) string {
-	if path.IsAbs(target) {
-		return target
+func DirAndPathJoin(srcDir, targetPath string) string {
+	if path.IsAbs(targetPath) {
+		return targetPath
 	}
-	source = AppendPathSeparatorIfNecessary(source)
-	return path.Join(path.Dir(source), target)
+	srcDir = AppendPathSeparatorIfNecessary(srcDir)
+	return path.Join(path.Dir(srcDir), targetPath)
 }
 
 // PathBase returns last element of `path`.

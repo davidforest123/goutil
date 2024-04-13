@@ -2,14 +2,15 @@ package gfs
 
 import (
 	"fmt"
-	"github.com/davidforest123/goutil/basic/gerrors"
-	"github.com/davidforest123/goutil/container/gstring"
 	"io/ioutil"
 	"os"
 	"path/filepath"
 	"runtime"
 	"strings"
 	"sync"
+
+	"github.com/davidforest123/goutil/basic/gerrors"
+	"github.com/davidforest123/goutil/container/gstring"
 )
 
 // base name: final element of the path, not the entire path.
@@ -119,7 +120,7 @@ func WalkDirTopLevel(dir string) (dirs []string, files []string, err error) {
 		return nil, nil, err
 	}
 	for _, v := range entries {
-		fullPath := PathJoin(AppendPathSeparatorIfNecessary(dir), v.Name())
+		fullPath := DirAndPathJoin(dir, v.Name())
 		if v.IsDir() {
 			dirs = append(dirs, fullPath)
 		} else {
