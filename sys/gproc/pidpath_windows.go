@@ -1,3 +1,5 @@
+//go:build windows
+
 package gproc
 
 import "github.com/davidforest123/goutil/basic/gerrors"
